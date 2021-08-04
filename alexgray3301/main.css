@@ -1,0 +1,125 @@
+:root {
+    --sky-blue: #0094ff;
+    --grass-green: #70FF00;
+    --soft-red: #FF3030;
+    --serious-black: #111111;
+    --serious-white: #eeeeee;
+}
+
+/* Fonts sourced from Google Fonts */
+@font-face {
+    font-family: "Nanum Pen Script";
+    src: url("../fonts/NanumPenScript-Regular.ttf");
+}
+
+@font-face {
+    font-family: "IM Fell French Canon";
+    src: url("../fonts/IMFellFrenchCanon-Regular.ttf");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-family: "Nanum Pen Script";
+    font-size: 26px;
+    margin: 0;
+    padding: 0;
+    background-color: var(--serious-black);
+    text-align: center;
+}
+
+h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 80px;
+    font-weight: bolder;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#welcome-div {
+    background-color: var(--sky-blue);
+    margin:0;
+    padding:0;
+}
+
+#greeting-div {
+    background-color: var(--grass-green);
+    margin: 0;
+    padding: 0;
+}
+
+#contacts-div {
+    background-color: var(--grass-green);
+    margin: 0;
+    padding: 0;
+}
+
+#badges-div {
+    background-color: var(--soft-red);
+    margin: 0;
+    padding: 0;
+}
+
+.newsletter-buttons {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    padding: 5px 0;
+    justify-content: space-between;
+}
+
+.newsletter-buttons button{
+    width: 230px;
+    height: 40px;
+    border-radius: 10px;
+    margin: 10px 2em;
+    border-style: none;
+    background-color: var(--sky-blue);
+    font-family: "Nanum Pen Script";
+    font-size: 26px;
+}
+
+/* add annoying animations? */
+.newsletter-buttons button:hover{
+    background-color: var(--soft-red);
+    color: var(--serious-white);
+}
+
+footer {
+    background-color: var(--serious-black);
+    font-family: "IM Fell French Canon";
+    color: var(--serious-white);
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 1em;
+}
+
+footer a {
+    color: var(--serious-white);
+    padding: 5px;
+    margin: 0;
+}
+
+footer a:hover {
+    color: var(--serious-black);
+    background: var(--serious-white);
+}
+
+.footer-logo {
+    display: flex;
+}

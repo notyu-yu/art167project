@@ -1,0 +1,149 @@
+:root {
+    --sky-blue: #0094ff;
+    --grass-green: #70FF00;
+    --soft-red: #FF3030;
+    --serious-black: #111111;
+    --serious-white: #eeeeee;
+    --techy-cyan: #00F0FF;
+    --sunny-yellow: #FFF500;
+}
+
+/* Fonts sourced from Google Fonts */
+@font-face {
+    font-family: "Nanum Pen Script";
+    src: url("../../fonts/NanumPenScript-Regular.ttf");
+}
+
+@font-face {
+    font-family: "IM Fell French Canon";
+    src: url("../../fonts/IMFellFrenchCanon-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Source Code Pro";
+    src: url("../../fonts/SourceCodePro-Regular.ttf")
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-family: "Nanum Pen Script";
+    font-size: 26px;
+    margin: 0;
+    padding: 0;
+    background-color: var(--serious-black);
+    text-align: center;
+}
+
+h1, h2, p, figure, ol {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 80px;
+    font-weight: bolder;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#welcome-div {
+    background-color: var(--sky-blue);
+    margin:0;
+    padding:0;
+}
+
+#subhead-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 calc(50% - 16em);
+}
+
+#news-div {
+    background-color: var(--grass-green);
+    margin: 0;
+    padding: 0;
+}
+
+#code-div {
+    background-color: var(--techy-cyan);
+    margin: 0;
+    padding: 0;
+}
+
+#picture-div {
+    background-color: var(--sunny-yellow);
+    margin: 0;
+    padding: 0;
+}
+
+.code-block {
+    font-family: "Source Code Pro";
+    font-size: 16px;
+    text-align: left;
+    margin: 0 20%;
+    padding: 0;
+}
+
+#badges-div {
+    background-color: var(--soft-red);
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    background-color: var(--serious-black);
+    font-family: "IM Fell French Canon";
+    color: var(--serious-white);
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 1em;
+}
+
+footer a {
+    color: var(--serious-white);
+    padding: 5px;
+    margin: 0;
+}
+
+footer a:hover {
+    color: var(--serious-black);
+    background: var(--serious-white);
+}
+
+.footer-logo {
+    display: flex;
+}
+
+#static-cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    filter: grayscale(1);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 2;
+    cursor: zoom-in;
+}
+
+#pass-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    cursor: zoom-in;
+    z-index: 3;
+    clip-path: circle(50px at 100px 100px);
+}
