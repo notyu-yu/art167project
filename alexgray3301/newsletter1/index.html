@@ -10,60 +10,7 @@
         <!-- Photo by Michael Dziedzic on Unsplash -->
         <img src="michael-dziedzic-0W4XLGITrHg-unsplash.jpg" alt="tv static cover" width="100%" height="100%" id="static-cover">
         <img src="pass1.jpg" alt="dsfapo08poiuwe15paosid2008asdlkasdlf" width="100%" height="100%" id="pass-layer">
-        <!-- Using tutorial from https://www.geeksforgeeks.org/how-to-add-a-custom-right-click-menu-to-a-webpage/ -->
-        <script type="text/javascript">
-            // Run the rightClick function when the user attempts to open context menu
-            document.oncontextmenu = rightClick;
-            // Run the hideMenu function when left clicked
-            document.onclick = hideMenu;
-            
-            // Opacity Variable
-            var currentOpacity = 0;
-            var rightClicking = false;
-            
-            function hideMenu() {
-                rightClicking = false;
-                if (currentOpacity < 0.93) {
-                    document.getElementById("static-cover").style.visibility = "hidden";
-                    document.getElementById("pass-layer").style.visibility = "hidden";
-                }
-            }
-            
-            function moreOpacity() {
-                console.log("more opacity");
-                currentOpacity += 0.005;
-                document.getElementById("static-cover").style.opacity = currentOpacity.toString();
-                if (currentOpacity < 0.95 && rightClicking) {
-                    setTimeout(function(){moreOpacity()}, 100)
-                }
-            }
-            
-            function rightClick(clickEvent) {
-                // Disalbe default right click menu
-                clickEvent.preventDefault();
-
-                console.log('hello');
-                            
-                // Hide image when right clicked again, else make it visible
-                if (document.getElementById("static-cover").style.visibility == "visible") {
-                    hideMenu();
-                    console.log("menu hidden");
-                }
-                else {
-                    console.log("showing image");
-
-                    var menu = document.getElementById("static-cover")
-                    var passLayer = document.getElementById("pass-layer")
-
-                    menu.style.visibility = "visible";
-                    rightClicking = true;
-                    moreOpacity();
-                    console.log(currentOpacity);
-
-                    passLayer.style.visibility = "visible"; passLayer.style.clipPath = "circle(80px at " + event.clientX + "px " + event.clientY + "px)"
-                }
-            }
-        </script>
+        <script src="right_click.js"></script>
         <div id="welcome-div">
            <h1>Welcome to Newsletter #1!</h1> 
            <div id="subhead-div">
