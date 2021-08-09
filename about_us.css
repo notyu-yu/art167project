@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --serious-black: #111111;
+    --serious-white: #eeeeee;
+    --professional-gray: #333333;
+    --bloody-red: #8a0404;
+}
+
+/* Fonts from Google Fonts */
+@font-face {
+    font-family: "Allura";
+    src: url("/fonts/Allura-Regular.ttf")
+}
+
+@font-face {
+    font-family: "IM Fell French Canon";
+    src: url("/fonts/IMFellFrenchCanon-Regular.ttf");
+}
+
+body {
+    background-color: var(--professional-gray);
+    color: var(--serious-white);
+    font-family: "IM Fell French Canon";
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#content-div {
+    width: 800px;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: var(--serious-black);
+    padding: 15px;
+}
+
+#logo {
+    align-content: center;
+    text-align: center;
+    padding: 15px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+p {
+    font-size: 18px;
+    padding: 5px 20px;
+}
+
+.admin-signature {
+    text-align: right;
+    padding: 5px 10%;
+}
+
+.admin-signature p {
+    font-family: "Allura";
+    font-size: 24px;
+}

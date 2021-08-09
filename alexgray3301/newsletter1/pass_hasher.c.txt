@@ -1,0 +1,37 @@
+// Include the needed libraries<br>
+#include &ltstdio.h&gt<br>
+#include &ltstdlib.h&gt<br>
+#include &ltctype.h&gt<br>
+#include &ltstring.h&gt<br>
+#include &ltstrings.h&gt<br>
+#include &ltinttypes.h&gt<br>
+#include &ltstdint.h&gt<br>
+<br>
+// Mathy numbers known to scramble numbers well<br>
+#define FNV_PRIME_64 ((1ULL&lt&lt40)+(1&lt&lt8)+0xb3)<br>
+#define FNV_OFFSET_BASIS_64 (14695981039346656037ULL)<br>
+<br>
+// FNV-1a Hash Funtion<br>
+uint64_t fnvHash(size_t n, const unsigned char * bytes, uint64_t initialValue) {<br>
+&emsp;// Bitwise XOR each character and multiply by a “nice” prime number<br>
+&emsp;for (size_t i = 0; i &lt n; i++) {<br>
+&emsp;&emsp;initialValue = (initialValue ^ bytes[i]) * FNV_PRIME_64;<br>
+&emsp;}<br>
+&emsp;// Return result when done!<br>
+&emsp;return initialValue;<br>
+}<br>
+<br>
+// Main function<br>
+int main(int argc, char ** argv) {<br>
+&emsp;// Start with offset<br>
+&emsp;uint64_t h;<br>
+&emsp;// Get the salt to scramble the password more<br>
+&emsp;const unsigned char * salt = argv[0];<br>
+&emsp;// Get the password<br>
+&emsp;const unsigned char * password = argv[1];<br>
+&emsp;// Generate the encrypted 64 bit integer with the salt and password<br>
+&emsp;h = fnvHash(strlen(salt), salt, FNV_OFFSET_BASIS_64);<br>
+&emsp;h = fnvHash(strlen(password), password, h);<br>
+&emsp;// Print the result!<br>
+&emsp;printf("Result: %" PRIx64 "\n", h);<br>
+}

@@ -9,100 +9,190 @@
     <body>
         <!-- Photo by Michael Dziedzic on Unsplash -->
         <img src="michael-dziedzic-0W4XLGITrHg-unsplash.jpg" alt="tv static cover" width="100%" height="100%" id="static-cover">
-        <img src="pass1.jpg" alt="dsfapo08poiuwe15paosid2008asdlkasdlf" width="100%" height="100%" id="pass-layer">
-        <script src="right_click.js"></script>
-        <div id="welcome-div">
-           <h1>Welcome to Newsletter #1!</h1> 
-           <div id="subhead-div">
-               <div>
-                    <!-- Source: https://thumbs.gfycat.com/ApprehensiveEnchantedArachnid-size_restricted.gif -->
-                    <p>
-                        <img src="../assets/flowers.gif" alt="flower high-five gif" height="200px" style="text-align: left;">
-                    </p>
-                </div>
-                <div>
-                    <p><u>Alex Gray</u></p>
-                    <p>8/12/2021</p>
-                </div>
-           </div>
-        </div>
-        <div id="news-div">
-            <h2>Today's Tech News</h2>
-            <p>New Gaming Console on the block! Valve released its Steam Deck handheld gaming console, with a full fat desktop operating system and AMD’s brand new processor technologies, all in the form factor of a Nintendo Swithch!</p>
+        <img src="pass1.jpg" alt="dsfapo08poiuwe15paosid2008asdlkasdlf" width="100%" height="100%" id="pass-layer" class="salt-is-reed">
+        <div id="admin-login">
             <figure>
-                <!-- Photo of https://store.steampowered.com/steamdeck -->
-                <img src="steam_deck.JPG" alt="steam deck image" width="60%">
+                <img src="/assets/logo_white.png" alt="website eye logo" width="200px">
+                <h1 class="host-h1">Warning</h1>
+                <p>Minimum Sanity Threshold Reached</p>
+                <p>It is no longer safe for you to view this page.</p>
+                <p>Please return at a later time, or log in to confirm your member status.</p>
+                <div class="admin-signature">
+                    <p>_____.com</p>
+                    <p>Admin Team</p>
+                </div>
+                <div class="warning-buttons">
+                    <a href="/login.html">
+                        <button>Login</button>
+                    </a>
+                    <button>Quit</button>
+                </div>
             </figure>
         </div>
-        <div id="code-div">
-           <h2>Today's Coding Session</h2> 
-           <p>Let’s learn how to write a simple password encrypter together!</p>
-           <ol>
-               <li>
-                   <p>Write your hash function, this scrambles your password text into a single larger number.</p>
-                   <p class="code-block">
-                   <code>
-                    // Mathy numbers known to scramble numbers well<br>
-                    #define FNV_PRIME_64 ((1ULL&lt&lt40)+(1&lt&lt8)+0xb3)<br>
-                    #define FNV_OFFSET_BASIS_64 (14695981039346656037ULL)<br>
-                    <br>
-                    // FNV-1a Hash Funtion<br>
-                    uint64_t fnvHash(size_t n, const unsigned char * bytes) {<br>
-                        // Start with offset<br>
-                        uint64_t h = FNV_OFFSET_BASIS_64;<br>
-                        // Bitwise XOR each character and multiply by a “nice” prime number<br>
-                        for (size_t i = 0; i &lt n; i++) {<br>
-                               h = (h ^ bytes[i]) * FNV_PRIME_64;<br>
-                           }<br>
-                        // Return result when done!<br>
-                           return h;<br>
-                    }
-                   </code>
-                   </p>
-               </li>
-           </ol>
-        </div>
-        <div id="picture-div">
-            <h2>Today's Picture:</h2>
-            <p>Here is a Picture of some turtles, enjoy!</p>
-            <img src="../assets/flowers.gif">
-        </div>
-        <div id="badges-div">
-           <img src="../assets/netscape_cube_badge.gif" alt="spinning netscape cube badge" height="50px">
-           <img src="../assets/ribbon_badge.png" alt="blue ribbon free speech online badge" width="50px">
+        <script src="right_click.js"></script>
+        <div id="alex-content">
+            <div id="welcome-div">
+               <h1>Welcome to Newsletter #1!</h1> 
+               <div id="subhead-div">
+                   <div>
+                        <!-- Source: https://thumbs.gfycat.com/ApprehensiveEnchantedArachnid-size_restricted.gif -->
+                        <p>
+                            <img src="/assets/flowers.gif" alt="flower high-five gif" height="200px" style="text-align: left;">
+                        </p>
+                    </div>
+                    <div>
+                        <p><u>Alex Gray</u></p>
+                        <p>8/9/2021</p>
+                    </div>
+               </div>
+            </div>
+            <div id="news-div">
+                <h2>Today's Tech News</h2>
+                <ol>
+                    <li>
+                        New Gaming Console on the block! Valve released its Steam Deck handheld gaming console, with a full fat desktop operating system and AMD’s brand new processor technologies, all in a comfortable handheld form factor!
+                        <figure>
+                            <!-- Photo of https://store.steampowered.com/steamdeck -->
+                            <img src="steam_deck.JPG" alt="steam deck image" width="500px">
+                        </figure>
+                    </li>
+                </ol>
+            </div>
+            <div id="code-div">
+               <h2>Today's Coding Session</h2> 
+               <p>Let’s learn how to write a simple password encrypter together!</p>
+               <ol>
+                   <li>
+                       Import the needed libraries
+                       <p class="code-block"><code>
+                            #include &ltstdio.h&gt<br>
+                            #include &ltstdlib.h&gt<br>
+                            #include &ltctype.h&gt<br>
+                            #include &ltstring.h&gt<br>
+                            #include &ltstrings.h&gt<br>
+                            #include &ltinttypes.h&gt<br>
+                            #include &ltstdint.h&gt<br>
+                       </code></p>
+                   </li>
+                   <li>
+                       Write your hash function, this scrambles your password text into a single larger number.
+                       <p class="code-block">
+                       <code>
+                        // Mathy numbers known to scramble numbers well<br>
+                        #define FNV_PRIME_64 ((1ULL&lt&lt40)+(1&lt&lt8)+0xb3)<br>
+                        #define FNV_OFFSET_BASIS_64 (14695981039346656037ULL)<br>
+                        <br>
+                        // FNV-1a Hash Funtion<br>
+                        uint64_t fnvHash(size_t n, const unsigned char * bytes, uint64_t initialValue) {<br>
+                        &emsp;// Bitwise XOR each character and multiply by a “nice” prime number<br>
+                        &emsp;for (size_t i = 0; i &lt n; i++) {<br>
+                        &emsp;&emsp;initialValue = (initialValue ^ bytes[i]) * FNV_PRIME_64;<br>
+                        &emsp;}<br>
+                        &emsp;// Return result when done!<br>
+                        &emsp;return initialValue;<br>
+                        }<br>
+                       </code>
+                       </p>
+                   </li>
+                   <li>
+                       Now write a main function to take in arguments from the command line!
+                       <p class="code-block"><code>
+                        int main(int argc, char ** argv) {<br>
+                        &emsp;// Start with offset<br>
+                        &emsp;uint64_t h;<br>
+                        &emsp;// Get the salt to scramble the password more<br>
+                        &emsp;const unsigned char * salt = argv[0];<br>
+                        &emsp;// Get the password<br>
+                        &emsp;const unsigned char * password = argv[1];<br>
+                        &emsp;// Generate the encrypted 64 bit integer with the salt and password<br>
+                        &emsp;h = fnvHash(strlen(salt), salt, FNV_OFFSET_BASIS_64);<br>
+                        &emsp;h = fnvHash(strlen(password), password, h);<br>
+                        &emsp;// Print the result!<br>
+                        &emsp;printf("Result: %" PRIx64 "\n", h);<br>
+                        s}
+                       </code></p>
+                   </li>
+                   <li>
+                       Ta da! Now you have a simple password encrypter, use it like this after compiling the code:
+                       <figure class="code-sample-sc">
+                           <img src="pass_hash_sample.png" alt = "password hasher sample use" height = "50px">
+                       </figure>
+                   </li>
+               </ol>>
+               New Gaming Console on the block! Valve released its Steam Deck handheld gaming console, with a full fat desktop operating system and AMD’s brand new processor technologies, all in a comfortable handheld form factor!
+               <figure>
+                   <!-- Photo of https://store.steampowered.com/steamdeck -->
+                   <img src="steam_deck.JPG" alt="steam deck image" width="500px">
+               </figure>
+           </li>
+       </ol>
+   </div>
+   <div id="code-div">
+      <h2>Today's Coding Session</h2> 
+      <p>Let’s learn how to write a simple password encrypter together!</p>
+      <ol>
+          <li>
+              Import the needed libraries
+              <p class="code-block"><code>
+                   #include &ltstdio.h&gt<br>
+                   #include &ltstdlib.h&gt<br>
+                   #include &ltctype.h&gt<br>
+                   #include &ltstring.h&gt<br>
+                   #include &ltstrings.h&gt<br>
+                   #include &ltinttypes.h&gt<br>
+                   #include &ltstdint.h&gt<br>
+              </code></p>
+          </li>
+          <li>
+              Write your hash function, this scrambles your password text into a single larger number.
+              <p class="code-block">
+              <code>
+               // Mathy numbers known to scramble numbers well<br>
+               #define FNV_PRIME_64 ((1ULL&lt&lt40)+(1&lt&lt8)+0xb3)<br>
+
+            </div>
+            <div id="picture-div">
+                <h2>Today's Picture:</h2>
+                <p>Here is a Picture of some turtles, enjoy!</p>
+                <img src="/assets/flowers.gif">
+            </div>
+            <div id="badges-div">
+               <img src="/assets/netscape_cube_badge.gif" alt="spinning netscape cube badge" height="50px">
+               <img src="/assets/ribbon_badge.png" alt="blue ribbon free speech online badge" width="50px">
+            </div>
         </div>
         <footer>
             <div class="footer-logo">
                 <div>
-                    <img src="../assets/logo_white.png" alt="website eye logo" width="70px">
+                    <img src="/assets/logo_white.png" alt="website eye logo" width="70px">
                 </div>
                 <div>
                     <p>
                         _____.com<br>
-                        For All Your Hosting Needs
+                        Invite Only Hosting Platform
                     </p>
                 </div>
             </div>
             <div>
                 <p>
-                    <a href="about_us.html">
+                    <a href="/about_us.html">
                         About Us
                     </a>
                 </p>
                 <p>
-                    <a href="contact_us.html">
+                    <a href="/contact_us.html">
                         Contact Us
                     </a>
                 </p>
             </div>
             <div>
                 <p>
-                    <a href="login.html">
+                    <a href="/login.html">
                         Login
                     </a>
                 </p>
                 <p>
-                    <a href="register.html">
+                    <a href="/register.html">
                         Register
                     </a>
                 </p>
