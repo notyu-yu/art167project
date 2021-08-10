@@ -13,6 +13,7 @@
         <div id="admin-login">
             <figure>
                 <img src="/assets/logo_white.png" alt="website eye logo" width="200px">
+            </figure>
                 <h1 class="host-h1">Warning</h1>
                 <p>Minimum Sanity Threshold Reached</p>
                 <p>It is no longer safe for you to view this page.</p>
@@ -25,9 +26,10 @@
                     <a href="/login.html">
                         <button>Login</button>
                     </a>
-                    <button>Quit</button>
+                    <a href="../index.html">
+                        <button>Quit</button>
+                    </a>
                 </div>
-            </figure>
         </div>
         <script src="right_click.js"></script>
         <div id="alex-content">
@@ -35,14 +37,12 @@
                <h1>Welcome to Newsletter #1!</h1> 
                <div id="subhead-div">
                    <div>
-                        <!-- Source: https://thumbs.gfycat.com/ApprehensiveEnchantedArachnid-size_restricted.gif -->
                         <p>
-                            <img src="/assets/flowers.gif" alt="flower high-five gif" height="200px" style="text-align: left;">
+                            <img src="/alexgray3301/assets/title_flowers.png" alt="flowers drawing" height="200px" style="text-align: left;">
                         </p>
                     </div>
                     <div>
-                        <p><u>Alex Gray</u></p>
-                        <p>8/9/2021</p>
+                        <p><a href="../index.html">Alex Gray</a></p>
                     </div>
                </div>
             </div>
@@ -50,20 +50,34 @@
                 <h2>Today's Tech News</h2>
                 <ol>
                     <li>
-                        New Gaming Console on the block! Valve released its Steam Deck handheld gaming console, with a full fat desktop operating system and AMD’s brand new processor technologies, all in a comfortable handheld form factor!
+                        <em>New</em> Gaming Console on the block! <b>Valve</b> released its <b>Steam Deck</b> handheld gaming console, with a full fat desktop operating system and <b>AMD</b> ’s brand new processor technologies, all in a comfortable handheld form factor!
                         <figure>
                             <!-- Photo of https://store.steampowered.com/steamdeck -->
                             <img src="steam_deck.JPG" alt="steam deck image" width="500px">
+                        </figure>
+                    </li>
+                    <li>
+                        Intel just came out with its new <em>beast-sized</em> <b>Beast Canyon</b> NUC, with their latest and greatest 11th Gen processors and enough room to put in a descrete graphics card (if you can find one). But is it <em>really</em> a NUC anymore when it's larger than some small form-factor PC's? I don't know, but it's got that sweet <em>RGB</em> tho.
+                        <figure>
+                            <!-- Photo of https://www.intel.com/content/dam/www/public/us/en/newsroom/posts/intel-nuc-11-extreme-front-16x9.jpg.rendition.intel.web.1072.603.jpg -->
+                            <img src="intel_nuc.JPG" alt="intel mini computer image" width="500px">
+                        </figure>
+                    </li>
+                    <li>
+                        <b>Google</b> have confirmed the release of their new <b>Pixel 6</b> smartphone, with their custom-designed <b>Google Tensor</b> processor and an <em>extra-huge</em> camera bump spanning across the entire back of the device. Seriosuly, how do you put a case on this thing?
+                        <figure>
+                            <!-- Photo of https://store.google.com/magazine/google_pixel_6 -->
+                            <img src="pixel6.JPG" alt="google pixel 6 phone image" width="500px">
                         </figure>
                     </li>
                 </ol>
             </div>
             <div id="code-div">
                <h2>Today's Coding Session</h2> 
-               <p>Let’s learn how to write a simple password encrypter together!</p>
+               <p>Let’s <i>learn</i> how to write a simple password encrypter together!</p>
                <ol>
                    <li>
-                       Import the needed libraries
+                       <i>Import</i> the needed libraries
                        <p class="code-block"><code>
                             #include &ltstdio.h&gt<br>
                             #include &ltstdlib.h&gt<br>
@@ -75,7 +89,7 @@
                        </code></p>
                    </li>
                    <li>
-                       Write your hash function, this scrambles your password text into a single larger number.
+                       <i>Write</i> your hash function, this <i>scrambles</i> your password text into a single large number.
                        <p class="code-block">
                        <code>
                         // Mathy numbers known to scramble numbers well<br>
@@ -95,7 +109,7 @@
                        </p>
                    </li>
                    <li>
-                       Now write a main function to take in arguments from the command line!
+                       Now <i>write</i> a main function to <i>take in</i> arguments from the command line!
                        <p class="code-block"><code>
                         int main(int argc, char ** argv) {<br>
                         &emsp;// Start with offset<br>
@@ -109,57 +123,28 @@
                         &emsp;h = fnvHash(strlen(password), password, h);<br>
                         &emsp;// Print the result!<br>
                         &emsp;printf("Result: %" PRIx64 "\n", h);<br>
-                        s}
+                        }
                        </code></p>
                    </li>
                    <li>
-                       Ta da! Now you have a simple password encrypter, use it like this after compiling the code:
+                       <em>Ta da</em>! Now you <i>have</i> a simple password encrypter, <i>use</i> it like <em>this</em> after compiling the code:
                        <figure class="code-sample-sc">
                            <img src="pass_hash_sample.png" alt = "password hasher sample use" height = "50px">
                        </figure>
                    </li>
-               </ol>>
-               New Gaming Console on the block! Valve released its Steam Deck handheld gaming console, with a full fat desktop operating system and AMD’s brand new processor technologies, all in a comfortable handheld form factor!
-               <figure>
-                   <!-- Photo of https://store.steampowered.com/steamdeck -->
-                   <img src="steam_deck.JPG" alt="steam deck image" width="500px">
-               </figure>
-           </li>
-       </ol>
-   </div>
-   <div id="code-div">
-      <h2>Today's Coding Session</h2> 
-      <p>Let’s learn how to write a simple password encrypter together!</p>
-      <ol>
-          <li>
-              Import the needed libraries
-              <p class="code-block"><code>
-                   #include &ltstdio.h&gt<br>
-                   #include &ltstdlib.h&gt<br>
-                   #include &ltctype.h&gt<br>
-                   #include &ltstring.h&gt<br>
-                   #include &ltstrings.h&gt<br>
-                   #include &ltinttypes.h&gt<br>
-                   #include &ltstdint.h&gt<br>
-              </code></p>
-          </li>
-          <li>
-              Write your hash function, this scrambles your password text into a single larger number.
-              <p class="code-block">
-              <code>
-               // Mathy numbers known to scramble numbers well<br>
-               #define FNV_PRIME_64 ((1ULL&lt&lt40)+(1&lt&lt8)+0xb3)<br>
-
+               </ol>
             </div>
             <div id="picture-div">
                 <h2>Today's Picture:</h2>
-                <p>Here is a Picture of some turtles, enjoy!</p>
-                <img src="/assets/flowers.gif">
+            <p>Here is a Picture of some turtles, enjoy!</p>
+            <figure>
+                <img src="turtles.jpg" alt="mspaint turtles", width="500px">
+            </figure>
             </div>
-            <div id="badges-div">
+            <!-- <div id="badges-div">
                <img src="/assets/netscape_cube_badge.gif" alt="spinning netscape cube badge" height="50px">
                <img src="/assets/ribbon_badge.png" alt="blue ribbon free speech online badge" width="50px">
-            </div>
+            </div> -->
         </div>
         <footer>
             <div class="footer-logo">

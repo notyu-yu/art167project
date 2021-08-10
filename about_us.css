@@ -30,7 +30,7 @@ body {
 }
 
 #content-div {
-    width: 800px;
+    width: min(800px, 80%);
     height: 100vh;
     margin: 0 auto;
     background-color: var(--serious-black);

@@ -1,13 +1,14 @@
 :root {
     --sky-blue: #0094ff;
     --grass-green: #70FF00;
-    --soft-red: #FF3030;
+    --techy-cyan: #00F0FF;
+    --sunny-yellow: #FFF500;
+    --rosey-red: #FF3030;
+    --night-black: #050505;
     --serious-black: #111111;
     --serious-white: #eeeeee;
     --professional-gray: #333333;
     --bloody-red: #8a0404;
-    --techy-cyan: #00F0FF;
-    --sunny-yellow: #FFF500;
 }
 
 /* Fonts sourced from Google Fonts */
@@ -17,8 +18,8 @@
 }
 
 @font-face {
-    font-family: "IM Fell French Canon";
-    src: url("/fonts/IMFellFrenchCanon-Regular.ttf");
+    font-family: "Gloria Hallelujah";
+    src: url("/fonts/GloriaHallelujah-Regular.ttf");
 }
 
 @font-face {
@@ -27,8 +28,18 @@
 }
 
 @font-face {
+    font-family: "IM Fell French Canon";
+    src: url("/fonts/IMFellFrenchCanon-Regular.ttf");
+}
+
+@font-face {
     font-family: "Allura";
     src: url("/fonts/Allura-Regular.ttf")
+}
+
+@font-face {
+    font-family: "Coming Soon";
+    src: url("/fonts/ComingSoon-Regular.ttf");
 }
 
 * {
@@ -47,26 +58,64 @@ body {
     padding: 0;
     background-color: var(--professional-gray);
     text-align: center;
+    color: var(--night-black);
 }
 
 #alex-content {
-    width: 800px;
+    width: min(800px, 90%);
     margin: 0 auto;
+}
+
+#alex-content a {
+    color: var(--night-black);    
+}
+
+#alex-content a:hover{
+    background-color: var(--rosey-red);
 }
 
 h1, h2, p, figure, ol, ul {
     margin: 0;
 }
 
-h1 {
-    font-size: 80px;
+#alex-content h1 {
+    font-size: 50px;
+    font-weight: bolder;
+    font-family: "Gloria Hallelujah";
+}
+
+#alex-content h2 {
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: underline;
+    font-family: "Gloria Hallelujah";
+}
+
+#alex-content em {
+    font-family: "Nanum Pen Script";
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+#alex-content em::after{
+    content: " ";
+}
+
+#alex-content b {
+    font-weight: 1000;
+    font-size: 1.1m;
+}
+
+#alex-content i {
+    font-family: "Coming Soon";
+    font-size: 0.75em;
     font-weight: bolder;
 }
 
-h2 {
-    font-size: 40px;
-    font-weight: bold;
-    text-decoration: underline;
+#alex-content figure {
+    text-align: center;
+    padding: 15px;
 }
 
 #welcome-div {
@@ -108,7 +157,7 @@ h2 {
 #code-div ol {
     list-style-type: decimal;
     list-style-position: inside;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     text-align: left;
 }
@@ -135,11 +184,11 @@ h2 {
     padding: 0;
 }
 
-#badges-div {
-    background-color: var(--soft-red);
+/* #badges-div {
+    background-color: var(--rosey-red);
     margin: 0;
     padding: 0;
-}
+} */
 
 footer {
     background-color: var(--serious-black);
@@ -190,7 +239,7 @@ footer a:hover {
 #admin-login {
     position: fixed;
     width: 600px;
-    height: 500px;
+    height: 510px;
     top: calc(50% - 250px);
     left: calc(50% - 300px);
     background-color: var(--serious-black);
