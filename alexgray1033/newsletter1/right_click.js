@@ -15,7 +15,7 @@ function hideStatic() {
 }
 
 function moreOpacity() {
-    currentOpacity += 0.02;
+    currentOpacity += 0.01;
     console.log(`Current Sanity: ${100 - currentOpacity * 100}`)
     document.getElementById("static-cover").style.opacity = currentOpacity.toString();
     document.addEventListener('mousemove', (event) => {document.getElementById("pass-layer").style.clipPath = "circle(80px at " + event.clientX + "px " + event.clientY + "px)"});

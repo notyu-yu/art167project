@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --serious-black: #111111;
+    --serious-white: #eeeeee;
+    --professional-gray: #333333;
+    --bloody-red: #8a0404;
+}
+
+/* Fonts from Google Fonts */
+@font-face {
+    font-family: "Libre barcode 128";
+    src: url("/fonts/LibreBarcode128-Regular.ttf");
+}
+
+body {
+    background-color: var(--professional-gray);
+    color: var(--serious-white);
+    font-family: "Libre barcode 128";
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 2px;
+}
+
+#content-div {
+    width: min(800px, 80%);
+    height: 100vh;
+    margin: 0 auto;
+    background-color: var(--serious-black);
+    padding: 15px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+p {
+    font-size: 30px;
+}

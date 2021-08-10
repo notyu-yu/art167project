@@ -2,6 +2,8 @@
     --sky-blue: #0094ff;
     --grass-green: #70FF00;
     --rosey-red: #FF3030;
+    --sunny-yellow: #FFF500;
+    --night-black: #050505;
     --serious-black: #111111;
     --serious-white: #eeeeee;
 }
@@ -15,11 +17,6 @@
 @font-face {
     font-family: "IM Fell French Canon";
     src: url("../fonts/IMFellFrenchCanon-Regular.ttf");
-}
-
-@font-face {
-    font-family: "Gloria Hallelujah";
-    src: url("/fonts/GloriaHallelujah-Regular.ttf");
 }
 
 @font-face {
@@ -48,6 +45,8 @@ body {
 #alex-content {
     width: min(800px, 90%);
     margin: 0 auto;
+    background-color: var(--sunny-yellow);
+    min-height: 100vh;
 }
 
 h1, h2, p, figure, ol, ul {
@@ -58,6 +57,23 @@ h1, h2, p, figure, ol, ul {
     font-size: 50px;
     font-weight: bolder;
     font-family: "Gloria Hallelujah";
+    height: 60px;
+    line-height: 60px;
+    padding: 5px;
+    animation-name: poppy-titles;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes poppy-titles {
+    from {
+        font-size: 40px;
+    }
+    
+    to {
+        font-size: 55px;
+    }
 }
 
 #alex-content h2 {
@@ -65,6 +81,25 @@ h1, h2, p, figure, ol, ul {
     font-weight: bold;
     text-decoration: underline;
     font-family: "Gloria Hallelujah";
+    background-color: var(--rosey-red);
+    animation-name: flashy-titles;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes flashy-titles {
+    from {
+        color: var(--sunny-yellow);
+    }
+    
+    50% {
+        color: var(--sky-blue);
+    }
+    
+    to {
+        color: var(--grass-green);
+    }
 }
 
 #alex-content em {
@@ -94,6 +129,14 @@ h1, h2, p, figure, ol, ul {
     padding: 15px;
 }
 
+#alex-content a {
+    color: var(--night-black);
+}
+
+#contacts-div a:hover {
+    background-color: var(--rosey-red);
+}
+
 h1, h2, p {
     margin: 0;
     padding: 0;
@@ -112,7 +155,7 @@ h1, h2, p {
 }
 
 #contacts-div {
-    background-color: var(--grass-green);
+    background-color: var(--sunny-yellow);
     margin: 0;
     padding: 0;
 }
@@ -157,6 +200,9 @@ footer {
     justify-content: space-between;
     padding: 1em 1em;
     border-top: solid 3px var(--serious-white);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 footer a {
