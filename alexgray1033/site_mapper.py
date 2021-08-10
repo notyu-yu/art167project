@@ -14,6 +14,7 @@ for directories, sub_directories, file_names in os.walk('.'):
 root_url = "https://7af11697c850fff.com/alexgray1033/"
 with open('sitemap.xml','w+') as f:
     f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
+    f.write('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
     f.write("\t<url>\n")
     f.write("\t\t<loc>" + root_url + "</loc>\n")
     f.write("\t</url>\n")

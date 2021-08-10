@@ -7,9 +7,9 @@
         <link rel="stylesheet" type="text/css" href="main.css">
     </head>
     <body>
-        <!-- Photo by Michael Dziedzic on Unsplash -->
-        <img src="michael-dziedzic-0W4XLGITrHg-unsplash.jpg" alt="tv static cover" width="100%" height="100%" id="static-cover">
-        <img src="pass1.jpg" alt="dsfapo08poiuwe15paosid2008asdlkasdlf" width="100%" height="100%" id="pass-layer">
+        <div id="eyes">
+            <p id="pwd">Password: Reed</p>
+        </div>
         <div id="admin-login">
             <figure>
                 <img src="/assets/logo_white.png" alt="website eye logo" width="200px">
@@ -31,7 +31,7 @@
                     </a>
                 </div>
         </div>
-        <script src="right_click.js"></script>
+        <script src="eyes.js"></script>
         <div id="alex-content">
             <div id="welcome-div">
                <h1>Welcome to Newsletter #2!</h1> 
@@ -50,96 +50,82 @@
                 <h2>Today's Tech News</h2>
                 <ol>
                     <li>
-                        <em>New</em> Gaming Console on the block! <b>Valve</b> released its <b>Steam Deck</b> handheld gaming console, with a full fat desktop operating system and <b>AMD</b> ’s brand new processor technologies, all in a comfortable handheld form factor!
+                        <b>AMD</b> just announced their <b>Radeon RX 6600 XT</b> graphics card, with their <b>RDNA 2</b> architecture, 32 compute unitx, 32 MB of <em>Infinity</em> Cache, and 8 GB of GDDR6 memory. Seems to be a great graphics card for 1080p gaming going by AMD's official numbers, but does it even matter if <em>scalpers</em> and <em>bots</em> will make this a paper launch anyways?
                         <figure>
-                            <!-- Photo of https://store.steampowered.com/steamdeck -->
-                            <img src="steam_deck.JPG" alt="steam deck image" width="500px">
+                            <!-- Photo of https://www.amd.com/en/products/graphics/amd-radeon-rx-6600-xt -->
+                            <img src="rx6600xt.JPG" alt="AMD Radeon 6600XT graphics card" width="500px">
                         </figure>
                     </li>
                     <li>
-                        Intel just came out with its new <em>beast-sized</em> <b>Beast Canyon</b> NUC, with their latest and greatest 11th Gen processors and enough room to put in a descrete graphics card (if you can find one). But is it <em>really</em> a NUC anymore when it's larger than some small form-factor PC's? I don't know, but it's got that sweet <em>RGB</em> tho.
+                        Certain <b>Dell Alienware</b> PC's are being banned in several states in the U.S, including <em>California</em>, <em>Vermont</em>, and <em>Hawaii</em>. The new power consumption laws limit the amount of power usage of computer based on their hardware capabilities, with more <em>powerful</em> and extensible computers less likely to be affected. At least they will be free from <em>Dell</em>'s scammy warranty system 
                         <figure>
-                            <!-- Photo of https://www.intel.com/content/dam/www/public/us/en/newsroom/posts/intel-nuc-11-extreme-front-16x9.jpg.rendition.intel.web.1072.603.jpg -->
-                            <img src="intel_nuc.JPG" alt="intel mini computer image" width="500px">
+                            <!-- Photo of https://www.dell.com/en-us/gaming/alienware-desktops -->
+                            <img src="alienware.JPG" alt="Dell Alienware PC listings" width="500px">
                         </figure>
                     </li>
                     <li>
-                        <b>Google</b> have confirmed the release of their new <b>Pixel 6</b> smartphone, with their custom-designed <b>Google Tensor</b> processor and an <em>extra-huge</em> camera bump spanning across the entire back of the device. Seriosuly, how do you put a case on this thing?
+                        Researches at <b>Dolos Group</b>, a security consultancy, have bypassed the TPM (Trusted Platform Module) that was required to install <b>Windows 11</b> due to its <i>supposedly</i> </em>high security</em>. The attack does require hardware access but is concerning nontheless. Pfft, <b>Windows 10</b> will be supported until <em>2025</em> anyways, I'll just stay on <b>Windows 10</b> until then.
                         <figure>
-                            <!-- Photo of https://store.google.com/magazine/google_pixel_6 -->
-                            <img src="pixel6.JPG" alt="google pixel 6 phone image" width="500px">
+                            <!-- Photo of https://dolosgroup.io/blog/2021/7/9/from-stolen-laptop-to-inside-the-company-network -->
+                            <img src="tpm_hack.JPG" alt="the tpm module being probed" width="500px">
                         </figure>
                     </li>
                 </ol>
             </div>
             <div id="code-div">
                <h2>Today's Coding Session</h2> 
-               <p>Let’s <i>learn</i> how to write a simple password encrypter together!</p>
+               Let's <i>make</i> a simple XML site mapper together!
                <ol>
                    <li>
-                       <i>Import</i> the needed libraries
+                       <i>Import</i> the os module to <i>see</i> files.
                        <p class="code-block"><code>
-                            #include &ltstdio.h&gt<br>
-                            #include &ltstdlib.h&gt<br>
-                            #include &ltctype.h&gt<br>
-                            #include &ltstring.h&gt<br>
-                            #include &ltstrings.h&gt<br>
-                            #include &ltinttypes.h&gt<br>
-                            #include &ltstdint.h&gt<br>
+                        import os<br>
                        </code></p>
                    </li>
                    <li>
-                       <i>Write</i> your hash function, this <i>scrambles</i> your password text into a single large number.
+                       <i>Walk</i> through the current folder and its sub-directories and <i>store</i> the file paths to a list.
                        <p class="code-block">
                        <code>
-                        // Mathy numbers known to scramble numbers well<br>
-                        #define FNV_PRIME_64 ((1ULL&lt&lt40)+(1&lt&lt8)+0xb3)<br>
-                        #define FNV_OFFSET_BASIS_64 (14695981039346656037ULL)<br>
-                        <br>
-                        // FNV-1a Hash Funtion<br>
-                        uint64_t fnvHash(size_t n, const unsigned char * bytes, uint64_t initialValue) {<br>
-                        &emsp;// Bitwise XOR each character and multiply by a “nice” prime number<br>
-                        &emsp;for (size_t i = 0; i &lt n; i++) {<br>
-                        &emsp;&emsp;initialValue = (initialValue ^ bytes[i]) * FNV_PRIME_64;<br>
-                        &emsp;}<br>
-                        &emsp;// Return result when done!<br>
-                        &emsp;return initialValue;<br>
-                        }<br>
+                        # Create a list to store file paths<br>
+                        file_lst = []<br>
+                        # Use os.walk to walk through files and directories in the current folder<br>
+                        for directories, sub_directories, file_names in os.walk('.'):<br>
+                        &emsp;#walk thorugh the file names<br>
+                        &emsp;for file in file_names:<br>
+                        &emsp;&emsp;if '.html' in file:<br>
+                        &emsp;&emsp;&emsp;# Join path and file name, and get rid of the "./"<br>
+                        &emsp;&emsp;&emsp;file_lst.append(os.path.join(directories,file)[2:])<br>
                        </code>
                        </p>
                    </li>
                    <li>
-                       Now <i>write</i> a main function to <i>take in</i> arguments from the command line!
+                       Finally, <i>format</i> the links according to the XML sitemap standard and <i>write</i> them to a file!
                        <p class="code-block"><code>
-                        int main(int argc, char ** argv) {<br>
-                        &emsp;// Start with offset<br>
-                        &emsp;uint64_t h;<br>
-                        &emsp;// Get the salt to scramble the password more<br>
-                        &emsp;const unsigned char * salt = argv[0];<br>
-                        &emsp;// Get the password<br>
-                        &emsp;const unsigned char * password = argv[1];<br>
-                        &emsp;// Generate the encrypted 64 bit integer with the salt and password<br>
-                        &emsp;h = fnvHash(strlen(salt), salt, FNV_OFFSET_BASIS_64);<br>
-                        &emsp;h = fnvHash(strlen(password), password, h);<br>
-                        &emsp;// Print the result!<br>
-                        &emsp;printf("Result: %" PRIx64 "\n", h);<br>
-                        }
+                        root_url = "https://7af11697c850fff.com/alexgray1033/"<br>
+                        with open('sitemap.xml','w+') as f:<br>
+                        &emsp;f.write('&lt?xml version="1.0" encoding="UTF-8"?&gt\n')<br>
+                        &emsp;f.write('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')<br>
+                        &emsp;f.write("\t&lturl&gt\n")<br>
+                        &emsp;f.write("\t\t&ltloc&gt" + root_url + "&lt/loc&gt\n")<br>
+                        &emsp;f.write("\t&lt/url&gt\n")<br>
+                        &emsp;for file_path in file_lst:<br>
+                        &emsp;&emsp;f.write("\t&lturl&gt\n")<br>
+                        &emsp;&emsp;f.write("\t\t&ltloc&gt" + root_url + file_path + "&lt/loc&gt\n")<br>
+                        &emsp;&emsp;f.write("\t&lt/url&gt\n")<br>
+                        &emsp;f.write("&lt/urlset&gt")
                        </code></p>
                    </li>
                    <li>
-                       <em>Ta da</em>! Now you <i>have</i> a simple password encrypter, <i>use</i> it like <em>this</em> after compiling the code:
-                       <figure class="code-sample-sc">
-                           <img src="pass_hash_sample.png" alt = "password hasher sample use" height = "50px">
-                       </figure>
+                       <em>Ta da!</em> Now you can automatically generate a sitemap for your own website, check out my sitemap <a href="../sitemap.xml">here</a>.
                    </li>
                </ol>
             </div>
             <div id="picture-div">
                 <h2>Today's Picture:</h2>
-            <p>Here is a Picture of some turtles, enjoy!</p>
-            <figure>
-                <img src="turtles.jpg" alt="mspaint turtles", width="500px">
-            </figure>
+                <p>here is a picture of a logging cabin, enjoy!</p>
+                <figure>
+                    <img src="cabin.jpg" alt="loggin cabin pwd: Reached", width="500px">
+                </figure>
             </div>
             <!-- <div id="badges-div">
                <img src="/assets/netscape_cube_badge.gif" alt="spinning netscape cube badge" height="50px">
