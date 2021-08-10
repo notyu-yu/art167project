@@ -46,7 +46,7 @@ body {
     width: min(800px, 90%);
     margin: 0 auto;
     background-color: var(--sunny-yellow);
-    min-height: 100vh;
+    min-height: calc(100vh - 130px);
 }
 
 h1, h2, p, figure, ol, ul {
@@ -200,7 +200,8 @@ footer {
     justify-content: space-between;
     padding: 1em 1em;
     border-top: solid 3px var(--serious-white);
-    position: fixed;
+    position: sticky;
+    height: 130px;
     bottom: 0;
     width: 100%;
 }

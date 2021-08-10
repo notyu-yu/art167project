@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Welcome to Alex's Newsletter!</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+        <!-- Photo by Michael Dziedzic on Unsplash -->
+        <img src="michael-dziedzic-0W4XLGITrHg-unsplash.jpg" alt="tv static cover" width="100%" height="100%" id="static-cover">
+        <img src="pass1.jpg" alt="dsfapo08poiuwe15paosid2008asdlkasdlf" width="100%" height="100%" id="pass-layer">
+        <div id="admin-login">
+            <figure>
+                <img src="/assets/logo_white.png" alt="website eye logo" width="200px">
+            </figure>
+                <h1 class="host-h1">Warning</h1>
+                <p>Minimum Sanity Threshold Reached</p>
+                <p>It is no longer safe for you to view this page.</p>
+                <p>Please return at a later time, or log in to confirm your member status.</p>
+                <div class="admin-signature">
+                    <p>7af11697c850fff.com</p>
+                    <p>Admin Team</p>
+                </div>
+                <div class="warning-buttons">
+                    <a href="/login.html">
+                        <button>Login</button>
+                    </a>
+                    <a href="../index.html">
+                        <button>Quit</button>
+                    </a>
+                </div>
+        </div>
+        <script src="right_click.js"></script>
+        <div id="alex-content">
+            <div id="welcome-div">
+               <h1>Welcome to Newsletter #2!</h1> 
+               <div id="subhead-div">
+                   <div>
+                        <p>
+                            <img src="/alexgray1033/assets/title_flowers.png" alt="flowers drawing" height="200px" style="text-align: left;">
+                        </p>
+                    </div>
+                    <div>
+                        <p><a href="../index.html">Alex Gray</a></p>
+                    </div>
+               </div>
+            </div>
+            <div id="news-div">
+                <h2>Today's Tech News</h2>
+                <ol>
+                    <li>
+                        <em>New</em> Gaming Console on the block! <b>Valve</b> released its <b>Steam Deck</b> handheld gaming console, with a full fat desktop operating system and <b>AMD</b> ’s brand new processor technologies, all in a comfortable handheld form factor!
+                        <figure>
+                            <!-- Photo of https://store.steampowered.com/steamdeck -->
+                            <img src="steam_deck.JPG" alt="steam deck image" width="500px">
+                        </figure>
+                    </li>
+                    <li>
+                        Intel just came out with its new <em>beast-sized</em> <b>Beast Canyon</b> NUC, with their latest and greatest 11th Gen processors and enough room to put in a descrete graphics card (if you can find one). But is it <em>really</em> a NUC anymore when it's larger than some small form-factor PC's? I don't know, but it's got that sweet <em>RGB</em> tho.
+                        <figure>
+                            <!-- Photo of https://www.intel.com/content/dam/www/public/us/en/newsroom/posts/intel-nuc-11-extreme-front-16x9.jpg.rendition.intel.web.1072.603.jpg -->
+                            <img src="intel_nuc.JPG" alt="intel mini computer image" width="500px">
+                        </figure>
+                    </li>
+                    <li>
+                        <b>Google</b> have confirmed the release of their new <b>Pixel 6</b> smartphone, with their custom-designed <b>Google Tensor</b> processor and an <em>extra-huge</em> camera bump spanning across the entire back of the device. Seriosuly, how do you put a case on this thing?
+                        <figure>
+                            <!-- Photo of https://store.google.com/magazine/google_pixel_6 -->
+                            <img src="pixel6.JPG" alt="google pixel 6 phone image" width="500px">
+                        </figure>
+                    </li>
+                </ol>
+            </div>
+            <div id="code-div">
+               <h2>Today's Coding Session</h2> 
+               <p>Let’s <i>learn</i> how to write a simple password encrypter together!</p>
+               <ol>
+                   <li>
+                       <i>Import</i> the needed libraries
+                       <p class="code-block"><code>
+                            #include &ltstdio.h&gt<br>
+                            #include &ltstdlib.h&gt<br>
+                            #include &ltctype.h&gt<br>
+                            #include &ltstring.h&gt<br>
+                            #include &ltstrings.h&gt<br>
+                            #include &ltinttypes.h&gt<br>
+                            #include &ltstdint.h&gt<br>
+                       </code></p>
+                   </li>
+                   <li>
+                       <i>Write</i> your hash function, this <i>scrambles</i> your password text into a single large number.
+                       <p class="code-block">
+                       <code>
+                        // Mathy numbers known to scramble numbers well<br>
+                        #define FNV_PRIME_64 ((1ULL&lt&lt40)+(1&lt&lt8)+0xb3)<br>
+                        #define FNV_OFFSET_BASIS_64 (14695981039346656037ULL)<br>
+                        <br>
+                        // FNV-1a Hash Funtion<br>
+                        uint64_t fnvHash(size_t n, const unsigned char * bytes, uint64_t initialValue) {<br>
+                        &emsp;// Bitwise XOR each character and multiply by a “nice” prime number<br>
+                        &emsp;for (size_t i = 0; i &lt n; i++) {<br>
+                        &emsp;&emsp;initialValue = (initialValue ^ bytes[i]) * FNV_PRIME_64;<br>
+                        &emsp;}<br>
+                        &emsp;// Return result when done!<br>
+                        &emsp;return initialValue;<br>
+                        }<br>
+                       </code>
+                       </p>
+                   </li>
+                   <li>
+                       Now <i>write</i> a main function to <i>take in</i> arguments from the command line!
+                       <p class="code-block"><code>
+                        int main(int argc, char ** argv) {<br>
+                        &emsp;// Start with offset<br>
+                        &emsp;uint64_t h;<br>
+                        &emsp;// Get the salt to scramble the password more<br>
+                        &emsp;const unsigned char * salt = argv[0];<br>
+                        &emsp;// Get the password<br>
+                        &emsp;const unsigned char * password = argv[1];<br>
+                        &emsp;// Generate the encrypted 64 bit integer with the salt and password<br>
+                        &emsp;h = fnvHash(strlen(salt), salt, FNV_OFFSET_BASIS_64);<br>
+                        &emsp;h = fnvHash(strlen(password), password, h);<br>
+                        &emsp;// Print the result!<br>
+                        &emsp;printf("Result: %" PRIx64 "\n", h);<br>
+                        }
+                       </code></p>
+                   </li>
+                   <li>
+                       <em>Ta da</em>! Now you <i>have</i> a simple password encrypter, <i>use</i> it like <em>this</em> after compiling the code:
+                       <figure class="code-sample-sc">
+                           <img src="pass_hash_sample.png" alt = "password hasher sample use" height = "50px">
+                       </figure>
+                   </li>
+               </ol>
+            </div>
+            <div id="picture-div">
+                <h2>Today's Picture:</h2>
+            <p>Here is a Picture of some turtles, enjoy!</p>
+            <figure>
+                <img src="turtles.jpg" alt="mspaint turtles", width="500px">
+            </figure>
+            </div>
+            <!-- <div id="badges-div">
+               <img src="/assets/netscape_cube_badge.gif" alt="spinning netscape cube badge" height="50px">
+               <img src="/assets/ribbon_badge.png" alt="blue ribbon free speech online badge" width="50px">
+            </div> -->
+        </div>
+        <footer>
+            <div class="footer-logo">
+                <div>
+                    <img src="/assets/logo_white.png" alt="website eye logo" width="70px">
+                </div>
+                <div>
+                    <p>
+                        7af11697c850fff.com<br>
+                        Invite Only Hosting Platform
+                    </p>
+                </div>
+            </div>
+            <div>
+                <p>
+                    <a href="/about_us.html">
+                        About Us
+                    </a>
+                </p>
+                <p>
+                    <a href="/contact_us.html">
+                        Contact Us
+                    </a>
+                </p>
+            </div>
+            <div>
+                <p>
+                    <a href="/login.html">
+                        Login
+                    </a>
+                </p>
+                <p>
+                    <a href="/register.html">
+                        Register
+                    </a>
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>
