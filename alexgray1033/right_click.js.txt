@@ -1,0 +1,42 @@
+// Tell the page to run our showMenu function on right click, and the hideMenu function on left click<br>
+document.oncontextmenu = showMenu;<br>
+document.onclick = hideMenu;<br>
+<br>
+function hideMenu() {<br>
+&emsp;console.log("hide menu");<br>
+&emsp;// Hide our flashy menu<br>
+&emsp;document.getElementById("flashy-menu").style.visibility = "hidden";<br>
+}<br>
+<br>
+function showMenu(clickEvent) {<br>
+&emsp;// Don't display the default right click menu<br>
+&emsp;clickEvent.preventDefault();<br>
+&emsp;// Get our menu element<br>
+&emsp;var menu = document.getElementById("flashy-menu");<br>
+&emsp;// Hide menu if its already visible<br>
+&emsp;if (menu.style.visibility == "visible") {<br>
+&emsp;&emsp;hideMenu();<br>
+&emsp;} else {<br>
+&emsp;&emsp;console.log("show menu");<br>
+&emsp;&emsp;// Show it at cursor location otherwise<br>
+&emsp;&emsp;menu.style.top = clickEvent.pageY + "px";<br>
+&emsp;&emsp;menu.style.left = clickEvent.pageX + "px";<br>
+&emsp;&emsp;menu.style.visibility = "visible";<br>
+&emsp;}<br>
+}<br>
+<br>
+document.getElementById('rainbow').onclick = function() {<br>
+&emsp;// Turn off popping if it's on<br>
+&emsp;if (document.body.classList.contains("poppy-rave")) {<br>
+&emsp;&emsp;document.body.classList.toggle("poppy-rave");<br>
+&emsp;}<br>
+&emsp;document.body.classList.toggle("rainbow-rave");<br>
+}<br>
+<br>
+document.getElementById('pop').onclick = function() {<br>
+&emsp;// Turn off rainbow if it's on<br>
+&emsp;if (document.body.classList.contains("rainbow-rave")) {<br>
+&emsp;&emsp;document.body.classList.toggle("rainbow-rave");<br>
+&emsp;}<br>
+&emsp;document.body.classList.toggle("poppy-rave");<br>
+}

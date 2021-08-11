@@ -175,10 +175,10 @@ h1, h2, p {
 }
 
 .newsletter-buttons button{
-    width: 230px;
+    width: 220px;
     height: 40px;
     border-radius: 10px;
-    margin: 10px 2em;
+    margin: 10px;
     border-style: none;
     background-color: var(--sky-blue);
     font-family: "Nanum Pen Script";

@@ -247,32 +247,35 @@ footer a:hover {
     background: var(--serious-white);
 }
 
-footer .footer-logo a {
-    color: var(--serious-white);
-    background-color: var(--serious-black);
-    text-decoration: none;
+.footer-logo {
     display: flex;
 }
 
-#static-cover {
+#eyes {
+    visibility: hidden;
+    background: var(--bloody-red);
+    opacity: 0;
     position: fixed;
     top: 0;
     left: 0;
-    filter: grayscale(1);
-    opacity: 0;
-    visibility: hidden;
+    width: 100vw;
+    height: 100vh;
     z-index: 2;
-    cursor: zoom-in;
 }
 
-#pass-layer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    visibility: hidden;
-    cursor: zoom-in;
+#eyes p {
+    color: var(--serious-white);
+    font-family: "IM Fell French Canon";
+    position: absolute;
+    top: 30%;
+    left: 70%;
+    z-index: 4;
+    opacity: 0;
+}
+
+.eye-img {
+    position: absolute;
     z-index: 3;
-    clip-path: circle(50px at 100px 100px);
 }
 
 #admin-login {
@@ -321,4 +324,72 @@ footer .footer-logo a {
     height: 60px;
     font-size: 20px;
     font-family: "IM Fell French Canon";
+}
+
+#flashy-menu {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    width: 150px;
+    height: 60px;
+}
+
+#flashy-menu button {
+    display: block;
+    border: solid 2px var(--night-black);
+    background-color: var(--techy-cyan);
+    width: 150px;
+    height: 30px;
+    padding: 5;
+    margin: 0;
+}
+
+#flashy-menu button:hover {
+    background-color: var(--night-black);
+    color: var(--techy-cyan);
+}
+
+.rainbow-rave {
+    animation-name: rainbow-cycle;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes rainbow-cycle{
+    from {
+        color: var(--sunny-yellow);
+    }
+    
+    25% {
+        color: var(--rosey-red);)
+    }
+    
+    50% {
+        color: var(--sky-blue);
+    }
+    
+    75% {
+        color: var(--techy-cyan);
+    }
+    
+    to {
+        color: var(--grass-green);
+    }
+}
+
+.poppy-rave {
+    animation-name: poppy-cycle;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes poppy-cycle {
+    from {
+        font-size: 0.8em;
+    }
+     to {
+         font-size: 1.2em;
+     }
 }

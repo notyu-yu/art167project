@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Welcome to Alex's Newsletter!</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+        <div id="flashy-menu">
+            <button id="rainbow">Rainbow!</button>
+            <button id="pop">Pop!</button>
+        </div>
+        <div id="admin-login">
+            <figure>
+                <img src="/assets/logo_white.png" alt="website eye logo" width="200px">
+            </figure>
+                <h1 class="host-h1">Warning</h1>
+                <p>Minimum Sanity Threshold Reached</p>
+                <p>It is no longer safe for you to view this page.</p>
+                <p>Please return at a later time, or log in to confirm your member status.</p>
+                <div class="admin-signature">
+                    <p>7af11697c850fff.com</p>
+                    <p>Admin Team</p>
+                </div>
+                <div class="warning-buttons">
+                    <a href="/login.html">
+                        <button>Login</button>
+                    </a>
+                    <a href="../index.html">
+                        <button>Quit</button>
+                    </a>
+                </div>
+        </div>
+        <script src="right_click.js"></script>
+        <div id="alex-content">
+            <div id="welcome-div">
+               <h1>Welcome to Newsletter #3!</h1> 
+               <div id="subhead-div">
+                   <div>
+                        <p>
+                            <img src="/alexgray1033/assets/title_flowers.png" alt="flowers drawing" height="200px" style="text-align: left;">
+                        </p>
+                    </div>
+                    <div>
+                        <p><a href="../index.html">Alex Gray</a></p>
+                    </div>
+               </div>
+            </div>
+            <div id="news-div">
+                <h2>Today's Tech News</h2>
+                <ol>
+                    <li>
+                        <b>OPPO</b> announced their new under-screen camera technology that claims to provide <em>clear</em> and <em>crisp</em> selfies while not interfering with display clarity. Maybe this will finally free the human race from the <em>camera bump</em> curse, just gotta wait to see if other fruity and non-fruity companies follow suit.
+                        <figure>
+                            <img src="oppo.JPG" alt="Oppo no-bump phone sample" width="500px">
+                            <figcaption>
+                                Picture of Oppo's prototype device from their <a href="https://www.oppo.com/en/newsroom/press/oppo-next-gen-under-screen-camera/">press release article</a>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <b>Tesla</b>'s <em>Cybertruck</em> have delayed its production to 2022, as its production date upadated on the official configuration page. Seriously, what is up with <em>Cyber</em> names stuff constantly being delayed?
+                        <figure>
+                            <img src="cybertruck.JPG" alt="cybertruck pre-order page" width="500px">
+                            <figcaption>
+                                Picture of Tesla's <a href="https://www.tesla.com/cybertruck/design#battery">configuratin page</a>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <b>ARM</b> published an article describing its new <em>flexible</em> 32 bit <b>PlasticARM</b> processor in a <em>ultra-thin</em> form factor, low cost, and potential for mass production. Sticker computer? Sticker computer!
+                        <figure>
+                            <img src="armplastic.JPG" alt="armplastic archetecture fiture" width="500px">
+                            <figcaption>
+                                ARM's architecture figure from their <a href="https://www.nature.com/articles/s41586-021-03625-w">Nature article</a>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ol>
+            </div>
+            <div id="code-div">
+               <h2>Today's Coding Session</h2> 
+               Let's <i>make</i> a custom right click menu together with <em>Javacript</em>!
+               <ol>
+                   <li>
+                       <i>Tell</i> the browser which functions to <i>run</i> on left and right clicks.
+                       <p class="code-block"><code>
+                        document.oncontextmenu = showMenu;<br>
+                        document.onclick = hideMenu;<br>
+                       </code></p>
+                   </li>
+                   <li>
+                       <i>Create</i> a function to <i>hide</i> our menu.
+                       <p class="code-block">
+                       <code>
+                        function hideMenu() {<br>
+                            &emsp;console.log("hide menu");<br>
+                            &emsp;// Hide our flashy menu<br>
+                            &emsp;document.getElementById("flashy-menu").style.visibility = "hidden";<br>
+                            }<br>
+                       </code>
+                       </p>
+                   </li>
+                   <li>
+                       <i>Write</i> the function to <i>show</i> our menu at right click location.
+                       <p class="code-block"><code>
+                        function showMenu(clickEvent) {<br>
+                            &emsp;// Don't display the default right click menu<br>
+                            &emsp;clickEvent.preventDefault();<br>
+                            &emsp;// Get our menu element<br>
+                            &emsp;var menu = document.getElementById("flashy-menu");<br>
+                            &emsp;// Hide menu if its already visible<br>
+                            &emsp;if (menu.style.visibility == "visible") {<br>
+                            &emsp;&emsp;hideMenu();<br>
+                            &emsp;} else {<br>
+                            &emsp;&emsp;console.log("show menu");<br>
+                            &emsp;&emsp;// Show it at cursor location otherwise<br>
+                            &emsp;&emsp;menu.style.top = clickEvent.clientY + "px";<br>
+                            &emsp;&emsp;menu.style.left = clickEvent.clientX + "px";<br>
+                            &emsp;&emsp;menu.style.visibility = "visible";<br>
+                            &emsp;}<br>
+                            }<br>
+                       </code></p>
+                   </li>
+                   <li>
+                       Now <i>tell</i> the page to <i>do</i> <em>cool</em> things with the menu buttons!
+                       <p class="code-block"><code>
+                        document.getElementById('rainbow').onclick = function() {<br>
+                            &emsp;// Turn off popping if it's on<br>
+                            &emsp;if (document.body.classList.contains("poppy-rave")) {<br>
+                            &emsp;&emsp;document.body.classList.toggle("poppy-rave");<br>
+                            &emsp;}<br>
+                            &emsp;document.body.classList.toggle("rainbow-rave");<br>
+                            }<br>
+                            <br>
+                            document.getElementById('pop').onclick = function() {<br>
+                            &emsp;// Turn off rainbow if it's on<br>
+                            &emsp;if (document.body.classList.contains("rainbow-rave")) {<br>
+                            &emsp;&emsp;document.body.classList.toggle("rainbow-rave");<br>
+                            &emsp;}<br>
+                            &emsp;document.body.classList.toggle("poppy-rave");<br>
+                            }
+                       </code></p>
+                   </li>
+                   <li>
+                       Now you have a custom right click menu! <i>Try</i> it out on this page!
+                   </li>
+               </ol>
+            </div>
+            <div id="picture-div">
+                <h2>Today's Picture:</h2>
+                <p>Here is the picture of happy stars!</p>
+                <figure>
+                    <img src="nightsky.png" alt="smiling starts and moon picture", width="500px">
+                </figure>
+            </div>
+            <!-- <div id="badges-div">
+               <img src="/assets/netscape_cube_badge.gif" alt="spinning netscape cube badge" height="50px">
+               <img src="/assets/ribbon_badge.png" alt="blue ribbon free speech online badge" width="50px">
+            </div> -->
+        </div>
+        <footer>
+            <div class="footer-logo">
+                <div>
+                    <img src="/assets/logo_white.png" alt="website eye logo" width="70px">
+                </div>
+                <div>
+                    <p>
+                        7af11697c850fff.com<br>
+                        Invite Only Hosting Platform
+                    </p>
+                </div>
+            </div>
+            <div>
+                <p>
+                    <a href="/about_us.html">
+                        About Us
+                    </a>
+                </p>
+                <p>
+                    <a href="/contact_us.html">
+                        Contact Us
+                    </a>
+                </p>
+            </div>
+            <div>
+                <p>
+                    <a href="/login.html">
+                        Login
+                    </a>
+                </p>
+                <p>
+                    <a href="/register.html">
+                        Register
+                    </a>
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>
