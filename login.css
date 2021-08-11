@@ -29,6 +29,10 @@ body {
     padding: 0;
 }
 
+a a:hover {
+    color: var(--serious-white);
+}
+
 #content-div {
     width: min(800px, 80%);
     height: 100vh;
