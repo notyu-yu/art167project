@@ -9,6 +9,7 @@
     --serious-white: #eeeeee;
     --professional-gray: #333333;
     --bloody-red: #8a0404;
+    --lunar-blue: #00d5ff;
 }
 
 /* Fonts sourced from Google Fonts */
@@ -356,6 +357,13 @@ footer a:hover {
     animation-direction: alternate;
 }
 
+.rainbow-rave a {
+    animation-name: rainbow-cycle;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
 @keyframes rainbow-cycle{
     from {
         color: var(--sunny-yellow);
@@ -392,4 +400,22 @@ footer a:hover {
      to {
          font-size: 1.2em;
      }
+}
+
+.pass {
+    color: var(--night-black);
+}
+
+.rainbow-rave .pass{
+    font-family: "IM Fell French Canon";
+    font-size: 0.8em;
+}
+
+#lunacy-filter {
+    background-color: var(--lunar-blue);
+    visibility: hidden;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.95;
 }

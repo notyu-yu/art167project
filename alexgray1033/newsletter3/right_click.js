@@ -1,9 +1,10 @@
 // Tell the page to run our showMenu function on right click, and the hideMenu function on left click
 document.oncontextmenu = showMenu;
 document.onclick = hideMenu;
+var lunacy = 0;
+var showing = false;
 
 function hideMenu() {
-    console.log("hide menu");
     // Hide our flashy menu
     document.getElementById("flashy-menu").style.visibility = "hidden";
 }
@@ -17,7 +18,6 @@ function showMenu(clickEvent) {
     if (menu.style.visibility == "visible") {
         hideMenu();
     } else {
-        console.log("show menu");
         // Show it at cursor location otherwise
         menu.style.top = clickEvent.clientY + "px";
         menu.style.left = clickEvent.clientX + "px";
@@ -27,16 +27,32 @@ function showMenu(clickEvent) {
 
 document.getElementById('rainbow').onclick = function() {
     // Turn off popping if it's on
-    if (document.body.classList.contains("poppy-rave")) {
-        document.body.classList.toggle("poppy-rave");
+    if (document.getElementById("alex-content").classList.contains("poppy-rave")) {
+        document.getElementById("alex-content").classList.toggle("poppy-rave");
     }
-    document.body.classList.toggle("rainbow-rave");
+    document.getElementById("alex-content").classList.toggle("rainbow-rave");
+    showing = !showing;
 }
 
 document.getElementById('pop').onclick = function() {
     // Turn off rainbow if it's on
-    if (document.body.classList.contains("rainbow-rave")) {
-        document.body.classList.toggle("rainbow-rave");
+    if (document.getElementById("alex-content").classList.contains("rainbow-rave")) {
+        document.getElementById("alex-content").classList.toggle("rainbow-rave");
     }
-    document.body.classList.toggle("poppy-rave");
+    document.getElementById("alex-content").classList.toggle("poppy-rave");
 }
+
+function lunacyTimer() {
+    if (showing) {
+        lunacy += 0.5;
+        console.log("Current Lunacy: " + lunacy);
+    }
+    if (lunacy > 95) {
+        document.getElementById("admin-login").style.visibility = "visible";
+        document.getElementById("lunacy-filter").style.visibility = "visible";
+        return;
+    }
+    setTimeout(function(){lunacyTimer()}, 100);
+}
+
+lunacyTimer();
