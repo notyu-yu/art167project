@@ -1,0 +1,440 @@
+:root {
+    --sky-blue: #0094ff;
+    --grass-green: #70FF00;
+    --techy-cyan: #00F0FF;
+    --sunny-yellow: #FFF500;
+    --rosey-red: #FF3030;
+    --night-black: #050505;
+    --serious-black: #111111;
+    --serious-white: #eeeeee;
+    --professional-gray: #333333;
+    --bloody-red: #8a0404;
+    --lunar-blue: #00d5ff;
+}
+
+/* Fonts sourced from Google Fonts */
+@font-face {
+    font-family: "Nanum Pen Script";
+    src: url("/fonts/NanumPenScript-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Gloria Hallelujah";
+    src: url("/fonts/GloriaHallelujah-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Source Code Pro";
+    src: url("/fonts/SourceCodePro-Regular.ttf")
+}
+
+@font-face {
+    font-family: "IM Fell French Canon";
+    src: url("/fonts/IMFellFrenchCanon-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Allura";
+    src: url("/fonts/Allura-Regular.ttf")
+}
+
+@font-face {
+    font-family: "Coming Soon";
+    src: url("/fonts/ComingSoon-Regular.ttf");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-family: "Nanum Pen Script";
+    font-size: 26px;
+    margin: 0;
+    padding: 0;
+    background-color: var(--professional-gray);
+    text-align: center;
+    color: var(--night-black);
+}
+
+#alex-content {
+    width: min(800px, 90%);
+    margin: 0 auto;
+}
+
+#alex-content a {
+    color: var(--night-black);    
+}
+
+#alex-content a:hover{
+    background-color: var(--rosey-red);
+}
+
+h1, h2, p, figure, ol, ul {
+    margin: 0;
+}
+
+#alex-content h1 {
+    font-size: 50px;
+    font-weight: bolder;
+    font-family: "Gloria Hallelujah";
+    height: 60px;
+    line-height: 60px;
+    padding: 5px;
+    animation-name: poppy-titles;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes poppy-titles {
+    from {
+        font-size: 40px;
+    }
+    
+    to {
+        font-size: 55px;
+    }
+}
+
+#alex-content h2 {
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: underline;
+    font-family: "Gloria Hallelujah";
+    background-color: var(--rosey-red);
+    animation-name: flashy-titles;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes flashy-titles {
+    from {
+        color: var(--sunny-yellow);
+    }
+    
+    50% {
+        color: var(--sky-blue);
+    }
+    
+    to {
+        color: var(--grass-green);
+    }
+}
+
+#alex-content em {
+    font-family: "Nanum Pen Script";
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+#alex-content em::after{
+    content: " ";
+}
+
+#alex-content b {
+    font-weight: 1000;
+    font-size: 1.1m;
+}
+
+#alex-content i {
+    font-family: "Coming Soon";
+    font-size: 0.75em;
+    font-weight: bolder;
+}
+
+#alex-content figure {
+    text-align: center;
+    padding: 15px;
+}
+
+#welcome-div {
+    background-color: var(--sky-blue);
+    margin:0;
+    padding:0;
+}
+
+#subhead-div {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#subhead-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 calc(50% - 16em);
+}
+
+#news-div {
+    background-color: var(--grass-green);
+    margin: 0;
+    padding: 0;
+}
+
+#news-div p, #news-div li{
+    text-align: left;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#code-div {
+    background-color: var(--techy-cyan);
+    margin: 0;
+    padding: 0;
+}
+
+#code-div ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+    width: 90%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#code-dive li {
+    padding-top: 1em;
+}
+
+.code-sample-sc {
+    display: block;
+    text-align: center;
+}
+
+.code-block {
+    font-family: "Source Code Pro";
+    font-size: 16px;
+    margin: 0 3em;
+    padding: 0;
+}
+
+#picture-div {
+    background-color: var(--sunny-yellow);
+    margin: 0;
+    padding: 0;
+}
+
+/* #badges-div {
+    background-color: var(--rosey-red);
+    margin: 0;
+    padding: 0;
+} */
+
+footer {
+    background-color: var(--serious-black);
+    font-family: "IM Fell French Canon";
+    color: var(--serious-white);
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 1em;
+    border-top: 3px solid var(--serious-white);
+}
+
+footer a {
+    color: var(--serious-white);
+    padding: 5px;
+    margin: 0;
+}
+
+footer a:hover {
+    color: var(--serious-black);
+    background: var(--serious-white);
+}
+
+.footer-logo {
+    display: flex;
+}
+
+#eyes {
+    visibility: hidden;
+    background: var(--bloody-red);
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+}
+
+#eyes p {
+    color: var(--serious-white);
+    font-family: "IM Fell French Canon";
+    position: absolute;
+    top: 30%;
+    left: 70%;
+    z-index: 4;
+    opacity: 0;
+}
+
+.eye-img {
+    position: absolute;
+    z-index: 3;
+}
+
+#admin-login {
+    position: fixed;
+    width: 600px;
+    height: 510px;
+    top: calc(50% - 250px);
+    left: calc(50% - 300px);
+    background-color: var(--serious-black);
+    color: var(--serious-white);
+    font-family: "IM Fell French Canon";
+    padding: 20px;
+    z-index: 4;
+    visibility: hidden;
+    border: solid 3px var(--professional-gray);
+}
+
+#admin-login h1 {
+    font-size: 40px;
+    font-weight: normal;
+    color: var(--bloody-red);
+    padding: 15px;
+}
+
+#admin-login p {
+    font-size: 20px;
+    padding: 5px;
+    line-height: 0.9em;
+}
+
+.admin-signature {
+    text-align: right;
+    padding: 5px 1em;
+    font-family: "Allura";
+}
+
+.warning-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 60px;
+}
+
+.warning-buttons button {
+    background-color: var(--serious-white);
+    width: 120px;
+    height: 60px;
+    font-size: 20px;
+    font-family: "IM Fell French Canon";
+}
+
+#flashy-menu {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    width: 150px;
+    height: 60px;
+}
+
+#flashy-menu button {
+    display: block;
+    border: solid 2px var(--night-black);
+    background-color: var(--techy-cyan);
+    width: 150px;
+    height: 30px;
+    padding: 5;
+    margin: 0;
+}
+
+#flashy-menu button:hover {
+    background-color: var(--night-black);
+    color: var(--techy-cyan);
+}
+
+.rainbow-rave {
+    animation-name: rainbow-cycle;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.rainbow-rave a {
+    animation-name: rainbow-cycle;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes rainbow-cycle{
+    from {
+        color: var(--sunny-yellow);
+    }
+    
+    25% {
+        color: var(--rosey-red);
+    }
+    
+    50% {
+        color: var(--sky-blue);
+    }
+    
+    75% {
+        color: var(--techy-cyan);
+    }
+    
+    to {
+        color: var(--grass-green);
+    }
+}
+
+.poppy-rave, .poppy-rave .code-block {
+    animation-name: poppy-cycle;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes poppy-cycle {
+    from {
+        font-size: 0.8em;
+    }
+     to {
+         font-size: 1.2em;
+     }
+}
+
+.pass {
+    color: var(--night-black);
+}
+
+.rainbow-rave .pass{
+    font-family: "IM Fell French Canon";
+    font-size: 0.8em;
+}
+
+.word {
+    display: none;
+    font-family: "IM Fell French Canon";
+}
+
+.poppy-rave .word{
+    display: inline;
+    font-size: 1.5em;
+}
+
+#lunacy-filter {
+    background-color: var(--lunar-blue);
+    visibility: hidden;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.95;
+}
+
+#static-cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    filter: grayscale(1);
+    visibility: hidden;
+    z-index: 2;
+}

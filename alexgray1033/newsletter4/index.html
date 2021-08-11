@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Welcome to Alex's Newsletter!</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+        <div id="flashy-menu">
+            <button id="rainbow">Rainbow!</button>
+            <button id="pop">Pop!</button>
+        </div>
+        <div id="lunacy-filter">
+        </div>
+        <!-- Photo by Michael Dziedzic on Unsplash -->
+        <img src="michael-dziedzic-0W4XLGITrHg-unsplash.jpg" alt="tv static cover" width="100%" height="100%" id="static-cover">
+        <div id="admin-login">
+            <figure>
+                <img src="/assets/logo_white.png" alt="website eye logo" width="200px">
+            </figure>
+                <h1 class="host-h1">Warning</h1>
+                <p><span id="value-name">Maximum Lunacy</span> Threshold Reached</p>
+                <p>It is no longer safe for you to view this page.</p>
+                <p>Please return at a later time, or log in to confirm your member status.</p>
+                <div class="admin-signature">
+                    <p>7af11697c850fff.com</p>
+                    <p>Admin Team</p>
+                </div>
+                <div class="warning-buttons">
+                    <a href="/login.html">
+                        <button>Login</button>
+                    </a>
+                    <a href="../index.html">
+                        <button>Quit</button>
+                    </a>
+                </div>
+        </div>
+        <script src="right_click.js"></script>
+        <div id="alex-content">
+            <div id="welcome-div">
+               <h1>Welcome to Newsletter #4!</h1> 
+               <div id="subhead-div">
+                   <div>
+                        <p>
+                            <img src="/alexgray1033/assets/title_flowers.png" alt="flowers drawing" height="200px" style="text-align: left;">
+                        </p>
+                    </div>
+                    <div>
+                        <p><a href="../index.html">Alex Gray</a></p>
+                    </div>
+               </div>
+            </div>
+            <div id="news-div">
+                <h2>Today's Tech News</h2>
+                <ol>
+                    <li>
+                        <b>Ap<span class="pass">p</span>le</b> will be including more child s<span class="pass">a</span>fety feature<span class="pass">s</span> with their upcoming OS update<span class="pass">s</span>, including <span class="pass">w</span>arning ab<span class="pass">o</span>>ut sexually explicit images in message and <span class="pass">r</span>eporting Chil<span class="pass">d</span> Sexual Abuse Material (CSAM) on <b>iCloud</b> to the National Center for Missing and Exploited Children<span class="pass">:</span> the scanning techonology uses <em>AI</em> to encrypt images <span class="word">u</span> into a "voucher" and <span class="word">m</span>compare them to a local database, and<span class="word">b</span> will remain secret<span class="word">r</span> to <b>Apple</b> unless a certain threshold has been met. Cool tech<span class="word">a</span>, but will it expand beyond CSAM for mass survillance? Not sure, maybe it's time to go Android before that happens.
+                        <figure>
+                            <img src="csam.JPG" alt="Apple child safety page" width="500px">
+                            <figcaption>
+                                A picture of Apples <a href="https://www.apple.com/child-safety/">Child Protection Page</a>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        The U.S. military carried out its third <em>Global Information Dominance Experiment</em> (GIDE), using <em>Artifical Intelligence</em> to help with decision making and operation planning, and supposedly gives <em>"predictive information"</em> to commanders. Who needs a crystal ball when you have AI on your side?
+                        <figure>
+                            <img src="gide.JPG" alt="cybertruck pre-order page" width="500px">
+                            <figcaption>
+                                Picture of military peeps participating in GIDE 3 from <a href="https://www.af.mil/News/Article-Display/Article/2703548/norad-usnorthcom-lead-3rd-global-information-dominance-experiment/">U.S Airforce Page</a>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        A bipartisian cybersecurity report showed that many of the U.S. departments and agencies have serious cybersecurity failures, with every department besides <b>Homeland Security</b> receiving a rating of C or D, with issues ranging from using unsupported OS to having hundreds of <em>high-risk</em> vulnerabilities. Hmmm... Wonder how many more D's we'll see when Windows 10 is no longer supported.
+                        <figure>
+                            <img src="securityreport.JPG" alt="U.S. government cybersecurity report card" width="500px">
+                            <figcaption>
+                                The cybersecurity report card from the <a href="https://www.hsgac.senate.gov/imo/media/doc/Federal%20Cybersecurity%20-%20America's%20Data%20Still%20at%20Risk%20(FINAL).pdf">Portman peters report</a>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ol>
+            </div>
+            <div id="code-div">
+               <h2>Today's Coding Session</h2> 
+                Tired of <i>seeing</i> jumbled up code on your webpage? Let's <i>make</i> a code formatter for HTML, in <em>Python</em>!
+               <ol>
+                   <li>
+                       <i>Import</i> the system module and <i>get</i> your argument from command line.
+                       <p class="code-block"><code>
+                        import sys<br>
+                        <br>
+                        filename = sys.argv[1]<br>
+                       </code></p>
+                   </li>
+                   <li>
+                       <i>Replace</i> every special character with their escape sequence
+                       <p class="code-block">
+                       <code>
+                        with open(filename) as input_file:<br>
+                        &emsp;# Replace special characters with their escape character<br>
+                        &emsp;formatted_string = input_file.read().replace('\t', '&emsp').replace('&emsp;', '&emsp;').replace('&lt', '&lt').replace('&gt', '&gt').replace('\n', '&ltbr&gt\n')<br>
+                        &emsp;# Write the result to another file<br>
+                        &emsp;with open(filename+'.txt', 'w+') as output_file:<br>
+                        &emsp;&emsp;output_file.write(formatted_string)
+                       </code>
+                       </p>
+                   </li>
+                   <li>
+                       Now you have (less) jumbled up code to put in your webpage! Just run it in command line and give it a file name.
+                   </li>
+               </ol>
+            </div>
+            <div id="picture-div">
+                <h2>Today's Picture:</h2>
+                <p>Here is the picture of a farm! With cute animals!</p>
+                <figure>
+                    <img src="farm.JPG" alt="farm with silo, barn, cow and chicken", width="500px">
+                </figure>
+            </div>
+            <!-- <div id="badges-div">
+               <img src="/assets/netscape_cube_badge.gif" alt="spinning netscape cube badge" height="50px">
+               <img src="/assets/ribbon_badge.png" alt="blue ribbon free speech online badge" width="50px">
+            </div> -->
+        </div>
+        <footer>
+            <div class="footer-logo">
+                <div>
+                    <img src="/assets/logo_white.png" alt="website eye logo" width="70px">
+                </div>
+                <div>
+                    <p>
+                        7af11697c850fff.com<br>
+                        Invite Only Hosting Platform
+                    </p>
+                </div>
+            </div>
+            <div>
+                <p>
+                    <a href="/about_us.html">
+                        About Us
+                    </a>
+                </p>
+                <p>
+                    <a href="/contact_us.html">
+                        Contact Us
+                    </a>
+                </p>
+            </div>
+            <div>
+                <p>
+                    <a href="/login.html">
+                        Login
+                    </a>
+                </p>
+                <p>
+                    <a href="/register.html">
+                        Register
+                    </a>
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>
