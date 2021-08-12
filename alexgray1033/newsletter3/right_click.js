@@ -38,6 +38,7 @@ document.getElementById('pop').onclick = function() {
     // Turn off rainbow if it's on
     if (document.getElementById("alex-content").classList.contains("rainbow-rave")) {
         document.getElementById("alex-content").classList.toggle("rainbow-rave");
+        showing = false;
     }
     document.getElementById("alex-content").classList.toggle("poppy-rave");
 }
