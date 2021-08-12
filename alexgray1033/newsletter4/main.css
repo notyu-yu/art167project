@@ -414,10 +414,6 @@ footer a:hover {
 .word {
     display: none;
     font-family: "IM Fell French Canon";
-}
-
-.poppy-rave .word{
-    display: inline;
     font-size: 1.5em;
 }
 

@@ -4,6 +4,7 @@ document.onclick = hideMenu;
 var val = 50;
 var raving = false;
 var popping = false;
+var maxSanity = 0;
 
 function hideMenu() {
     // Hide our flashy menu
@@ -49,9 +50,18 @@ document.getElementById('pop').onclick = function() {
 function lunacyTimer() {
     if (raving) {
         val += 1;
+        if (val > maxSanity) {
+            maxSanity = val;
+        }
         console.log("Current Lunacy: " + val);
     } else if (popping) {
         val -= 1;
+        if (maxSanity - val > 60) {
+            var wordList = document.getElementsByClassName("word");
+            for (var i = 0; i < wordList.length; i++) {
+                wordList[i].style.display = "inline";
+            }
+        }
         console.log("Current Sanity: " + val);
     }
     if (val > 95) {
