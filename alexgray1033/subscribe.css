@@ -96,6 +96,14 @@ button:hover{
     color: var(--serious-white);
 }
 
+a {
+    color: var(--night-black);
+}
+
+a:visited {
+    color: var(--night-black);
+}
+
 footer {
     background-color: var(--serious-black);
     font-family: "IM Fell French Canon";
