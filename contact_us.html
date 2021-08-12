@@ -4,24 +4,58 @@
     <head>
         <title>Contact Us</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="contact_us.css">
+        <link rel="stylesheet" type="text/css" href="main.css">
     </head>
     <body>
-        <div id="content-div">
-            <h1>Website Admin Contact Form</h1>
-            <form method="POST" name="admin-contact" action="/form_thanks.html" netlify>
-                <div id="email-div">
-                    <label>Reply Email</label>
-                    <input required name="email" type="email" placeholder="Enter your email here">
-                </div>
-                <div id="message-div">
-                    <label>Message</label>
-                    <textarea required name="message" placeholder="Write your message here"></textarea>
-                </div>
-                <div id="button-div">
-                    <button type="submit">Submit</button>
-                </div>
-            </form>
+        <div id="header-div">
+            <div>
+                <a id="logo-link" href="index.html">
+                    <img src="assets/logo_white.png" alt="website eye logo" width="38px">
+                </a>
+            </div>
+            <nav>
+                <a href="about_us.html">About Us</a>
+                <a href="contact_us.html">Contact Us</a>
+            </nav>
+            <div>
+                <a href="login.html">Login</a>
+                <a href="register.html">Register</a>
+            </div>
         </div>
+        <div id="content-div">
+            <div id="content-body">
+                <h1>Website Admin Contact Form</h1>
+                <form id="feedback-form" method="POST" name="admin-contact" action="/form_thanks.html" netlify>
+                    <div id="email-div">
+                        <label>Reply Email</label>
+                        <input required name="email" type="email" placeholder="Enter your email here">
+                    </div>
+                    <div id="message-div">
+                        <label>Message</label>
+                        <textarea required name="message" placeholder="Write your message here"></textarea>
+                    </div>
+                    <div id="button-div">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <footer>
+            <div id="footer-div">
+                <div>
+                    <p>
+                        7af11697c850fff.com<br>
+                    </p>
+                </div>
+                <a href="/index.html"><div>
+                    <img src="/assets/logo_white.png" alt="website eye logo" width="30px">
+                </div></a>
+                <div>
+                    <p>
+                        Invite Only Hosting Platform
+                    </p>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>

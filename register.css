@@ -115,6 +115,7 @@ a:visited {
     color: var(--serious-white);
 }
 
+
 footer {
     background-color: var(--serious-black);
     opacity: 0.95;
@@ -152,52 +153,13 @@ footer p {
     padding: 5px;
 }
 
-#email-div {
-    height: 45px;
-    width: max(80%, 700px);
-    margin: 0 auto;
-    padding: 15px;
-    text-align: left;
-}
-
-label {
-    display: inline-block;
-    width: 100px;
-}
-
 input {
     display: inline-block;
-    width: 400px;
+    width: 300px;
     height: 30px;
     font-family: "IM Fell French Canon";
+    text-align: center;
     font-size: 18px;
-    padding: 0 5px;
-    color: var(--serious-black);
-    margin: 10px;
-}
-
-#message-div {
-    height: 145px;
-    width: max(80%, 700px);
-    margin: 0 auto;
-    padding: 15px;
-    text-align: left;
-}
-
-textarea {
-    display: inline-block;
-    font-size: 18px;
-    padding: 0 5px;
-    color: var(--serious-black);
-    margin: 0 10px;
-    width: 400px;
-    max-width: 400px;
-    min-width: 400px;
-    height: 120px;
-    max-height: 120px;
-    min-height: 120px;
-    font-family: "IM Fell French Canon";
-    vertical-align: text-top;
     color: var(--serious-black);
 }
 
@@ -211,26 +173,10 @@ button {
     margin: 30px;
 }
 
-#feedback-form button {
-    margin-left: 90px;
-}
-
 .error {
     color: var(--bloody-red);
     font-family: "Nosifer";
     font-size: 30px;
     font-weight: lighter;
     line-height: 0.8em;
-}
-
-#member-pages {
-    border: double 8px var(--serious-white);
-
-}
-
-#member-pages a {
-    display: inline-block;
-    width: 25%;
-    padding: 0;
-    margin: 5px 0;
 }

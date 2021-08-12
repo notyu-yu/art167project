@@ -2,24 +2,59 @@
 
 <html lang="en">
     <head>
-        <title>Register</title>
+        <title>Welcome to 7af11697c850fff.com</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="../login.css">
+        <link rel="stylesheet" type="text/css" href="/main.css">
     </head>
     <body>
-        <div id="content-div">
-            <h1>Congratulations on getting an invite key.</h1>
-            <p>This is the end of the puzzles, if you would like to see all the hidden stuff, check out the art project's <a href="https://github.com/notyu-yu/art167project">Github Page</a>.</p>
-            <p>If you have any questions, please feel free to contact me at notyuhang@gmail.com</p>
-            <p>If you are interested in registering, please enter your email below, I don't have hosting experience but we can try to work something out.</p>
+        <div id="header-div">
             <div>
-                <form method="POST" name="subscriber-email" action="/form_thanks.html" netlify>
-                    <div class="input-div">
-                        <input required type="email" name="registration-email" placeholder="Email">
-                    </div>
-                    <button type="submit">Register</button>
-                </form>
+                <a id="logo-link" href="index.html">
+                    <img src="/assets/logo_white.png" alt="website eye logo" width="38px">
+                </a>
+            </div>
+            <nav>
+                <a href="/about_us.html">About Us</a>
+                <a href="/contact_us.html">Contact Us</a>
+            </nav>
+            <div>
+                <a href="/login.html">Login</a>
+                <a href="/register.html">Register</a>
             </div>
         </div>
+        <div id="content-div">
+            <div id="content-body">
+                <h1>Congratulations on getting an invite key.</h1>
+                <p>This is the end of the puzzles. If you would like to see all the hidden stuff, check out the art project's <a href="https://github.com/notyu-yu/art167project">Github Page</a>.</p>
+                <p>If you have any questions, please feel free to contact me at notyuhang@gmail.com</p>
+                <p>If you are interested in hosting your webpage here, please enter your email below.I don't have much hosting experience but we can try to work something out.</p>
+                <!-- A nice soundtrack to celebrete the ending: https://www.youtube.com/watch?v=T-gtQDLPAvs -->
+                <div>
+                    <form method="POST" name="subscriber-email" action="/form_thanks.html" netlify>
+                        <div class="input-div">
+                            <input required type="email" name="registration-email" placeholder="Email">
+                        </div>
+                        <button type="submit">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div id="footer-div">
+                <div>
+                    <p>
+                        7af11697c850fff.com<br>
+                    </p>
+                </div>
+                <a href="/index.html"><div>
+                    <img src="/assets/logo_white.png" alt="website eye logo" width="30px">
+                </div></a>
+                <div>
+                    <p>
+                        Invite Only Hosting Platform
+                    </p>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>

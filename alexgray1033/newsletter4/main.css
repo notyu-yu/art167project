@@ -57,9 +57,34 @@ body {
     font-size: 26px;
     margin: 0;
     padding: 0;
-    background-color: var(--professional-gray);
+    background-color: var(--techy-cyan);
     text-align: center;
-    color: var(--night-black);
+    animation-name: rainbow-bg;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes rainbow-bg{
+    from {
+        background-color: var(--sunny-yellow);
+    }
+    
+    25% {
+        background-color: var(--rosey-red);
+    }
+    
+    50% {
+        background-color: var(--sky-blue);
+    }
+    
+    75% {
+        background-color: var(--techy-cyan);
+    }
+    
+    to {
+        background-color: var(--grass-green);
+    }
 }
 
 #alex-content {
@@ -229,27 +254,39 @@ h1, h2, p, figure, ol, ul {
 
 footer {
     background-color: var(--serious-black);
+    opacity: 0.95;
     font-family: "IM Fell French Canon";
+    font-size: 14px;
     color: var(--serious-white);
-    display: flex;
-    justify-content: space-between;
-    padding: 1em 1em;
-    border-top: 3px solid var(--serious-white);
+    padding: 2px;
+    border-top: solid 1px var(--serious-white);
+    margin-bottom: -1px;
+    height: 34px;
+    min-height: 34px;
+    bottom: 0;
 }
 
-footer a {
-    color: var(--serious-white);
-    padding: 5px;
+#footer-div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    width: 60%;
+    margin: 0 auto;
+    padding-left: 88px;
+}
+
+#footer-div div {
+    display: inline-block;
+}
+
+footer img {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+footer p {
     margin: 0;
-}
-
-footer a:hover {
-    color: var(--serious-black);
-    background: var(--serious-white);
-}
-
-.footer-logo {
-    display: flex;
+    padding: 5px;
 }
 
 #eyes {

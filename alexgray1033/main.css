@@ -3,6 +3,7 @@
     --grass-green: #70FF00;
     --rosey-red: #FF3030;
     --sunny-yellow: #FFF500;
+    --techy-cyan: #00F0FF;
     --night-black: #050505;
     --serious-black: #111111;
     --serious-white: #eeeeee;
@@ -38,15 +39,41 @@ body {
     font-size: 26px;
     margin: 0;
     padding: 0;
-    background-color: var(--serious-black);
+    background-color: var(--techy-cyan);
     text-align: center;
+    animation-name: rainbow-bg;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes rainbow-bg{
+    from {
+        background-color: var(--sunny-yellow);
+    }
+    
+    25% {
+        background-color: var(--rosey-red);
+    }
+    
+    50% {
+        background-color: var(--sky-blue);
+    }
+    
+    75% {
+        background-color: var(--techy-cyan);
+    }
+    
+    to {
+        background-color: var(--grass-green);
+    }
 }
 
 #alex-content {
     width: min(800px, 90%);
     margin: 0 auto;
     background-color: var(--sunny-yellow);
-    min-height: calc(100vh - 130px);
+    min-height: calc(100vh - 35px);
 }
 
 h1, h2, p, figure, ol, ul {
@@ -194,29 +221,30 @@ h1, h2, p {
 
 footer {
     background-color: var(--serious-black);
+    opacity: 0.8;
     font-family: "IM Fell French Canon";
+    font-size: 14px;
     color: var(--serious-white);
     display: flex;
-    justify-content: space-between;
-    padding: 1em 1em;
-    border-top: solid 3px var(--serious-white);
-    position: sticky;
-    height: 130px;
-    bottom: 0;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 2px;
+    border-top: solid 1px var(--serious-white);
+    height: 35px;
+    min-height: 35px;
     width: 100%;
 }
 
-footer a {
-    color: var(--serious-white);
-    padding: 5px;
-    margin: 0;
+footer img {
+    display: inline-block;
+    margin: 0 10px;
 }
 
-footer a:hover {
-    color: var(--serious-black);
-    background: var(--serious-white);
+.footer-div {
+    display: inline-block;
+    margin-left: 24em;
 }
 
-.footer-logo {
-    display: flex;
+#spacer {
+    width: 5em;
 }

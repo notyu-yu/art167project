@@ -4,20 +4,54 @@
     <head>
         <title>Register</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="login.css">
+        <link rel="stylesheet" type="text/css" href="register.css">
     </head>
     <body>
-        <div id="content-div">
-           <h1>Register to 7af11697c850fff.com</h1> 
-           <p>Welcome, Potential New Member</p>
-           <p>Please enter your invite key</p>
+        <div id="header-div">
             <div>
-                <div class="input-div">
-                    <input required id="key-entry" name="invite-key" placeholder="Invite Key">
-                </div>
-                <button  id="register-button">Register</button>
+                <a id="logo-link" href="index.html">
+                    <img src="assets/logo_white.png" alt="website eye logo" width="38px">
+                </a>
             </div>
-            <script src="registration_manager.js"></script>
+            <nav>
+                <a href="about_us.html">About Us</a>
+                <a href="contact_us.html">Contact Us</a>
+            </nav>
+            <div>
+                <a href="login.html">Login</a>
+                <a href="register.html">Register</a>
+            </div>
         </div>
+        <div id="content-div">
+            <div id="content-body">
+               <h1>Register to 7af11697c850fff.com</h1> 
+               <p>Welcome, potential new member.</p>
+               <p>Please enter your invite key.</p>
+                <div>
+                    <div class="input-div">
+                        <input required id="key-entry" name="invite-key" placeholder="Invite Key">
+                    </div>
+                    <button  id="register-button">Register</button>
+                </div>
+                <script src="registration_manager.js"></script>
+            </div>
+        </div>
+        <footer>
+            <div id="footer-div">
+                <div>
+                    <p>
+                        7af11697c850fff.com<br>
+                    </p>
+                </div>
+                <a href="/index.html"><div>
+                    <img src="/assets/logo_white.png" alt="website eye logo" width="30px">
+                </div></a>
+                <div>
+                    <p>
+                        Invite Only Hosting Platform
+                    </p>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
