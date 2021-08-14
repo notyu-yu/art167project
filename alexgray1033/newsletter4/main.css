@@ -370,6 +370,7 @@ footer p {
     visibility: hidden;
     width: 150px;
     height: 60px;
+    z-index: 5;
 }
 
 #flashy-menu button {
@@ -456,11 +457,11 @@ footer p {
 
 #lunacy-filter {
     background-color: var(--lunar-blue);
-    visibility: hidden;
     position: fixed;
+    visibility: hidden;
     width: 100vw;
     height: 100vh;
-    opacity: 0.95;
+    opacity: 0;
 }
 
 #static-cover {
@@ -468,6 +469,7 @@ footer p {
     top: 0;
     left: 0;
     filter: grayscale(1);
+    opacity: 0;
     visibility: hidden;
     z-index: 2;
 }

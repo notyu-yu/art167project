@@ -334,7 +334,7 @@ footer p {
 #admin-login h1 {
     font-size: 40px;
     font-weight: normal;
-    color: var(--bloody-red);
+    color: var(--lunar-blue);
     padding: 15px;
 }
 
@@ -370,6 +370,7 @@ footer p {
     visibility: hidden;
     width: 150px;
     height: 60px;
+    z-index: 5;
 }
 
 #flashy-menu button {
@@ -439,10 +440,6 @@ footer p {
      }
 }
 
-.pass {
-    color: var(--night-black);
-}
-
 .rainbow-rave .pass{
     font-family: "IM Fell French Canon";
     font-size: 0.8em;
@@ -450,9 +447,10 @@ footer p {
 
 #lunacy-filter {
     background-color: var(--lunar-blue);
-    visibility: hidden;
     position: fixed;
+    visibility: hidden;
     width: 100vw;
     height: 100vh;
-    opacity: 0.95;
+    opacity: 0;
+    z-index: 2;
 }

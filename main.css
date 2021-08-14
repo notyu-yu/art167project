@@ -103,7 +103,6 @@ h1 {
     margin: 0;
     display: inline-block;
     padding: 5px;
-    transition: 0.7s;
 }
 
 #header-div a:hover:not(#logo-link), #content-div a:hover:not(#logo-link) {
