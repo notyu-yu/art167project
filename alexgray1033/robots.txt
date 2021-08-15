@@ -1,4 +1,4 @@
-# Sitemap at ./setmap.xml
+# Sitemap at ./sitemap.xml
 
 User-agnet: *
 Disallow: /
