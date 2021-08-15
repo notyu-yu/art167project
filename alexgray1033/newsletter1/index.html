@@ -89,13 +89,13 @@
                    <li>
                        <i>Import</i> the needed libraries
                        <p class="code-block"><code>
-                            #include &ltstdio.h&gt<br>
-                            #include &ltstdlib.h&gt<br>
-                            #include &ltctype.h&gt<br>
-                            #include &ltstring.h&gt<br>
-                            #include &ltstrings.h&gt<br>
-                            #include &ltinttypes.h&gt<br>
-                            #include &ltstdint.h&gt<br>
+                            #include &lt;stdio.h&gt;<br>
+                            #include &lt;stdlib.h&gt;<br>
+                            #include &lt;ctype.h&gt;<br>
+                            #include &lt;string.h&gt;<br>
+                            #include &lt;strings.h&gt;<br>
+                            #include &lt;inttypes.h&gt;<br>
+                            #include &lt;stdint.h&gt;<br>
                        </code></p>
                    </li>
                    <li>
@@ -103,13 +103,13 @@
                        <p class="code-block">
                        <code>
                         // Mathy numbers known to scramble numbers well<br>
-                        #define FNV_PRIME_64 ((1ULL&lt&lt40)+(1&lt&lt8)+0xb3)<br>
+                        #define FNV_PRIME_64 ((1ULL&lt;&lt;40)+(1&lt;&lt;8)+0xb3)<br>
                         #define FNV_OFFSET_BASIS_64 (14695981039346656037ULL)<br>
                         <br>
                         // FNV-1a Hash Funtion<br>
                         uint64_t fnvHash(size_t n, const unsigned char * bytes, uint64_t initialValue) {<br>
                         &emsp;// Bitwise XOR each character and multiply by a “nice” prime number<br>
-                        &emsp;for (size_t i = 0; i &lt n; i++) {<br>
+                        &emsp;for (size_t i = 0; i &lt; n; i++) {<br>
                         &emsp;&emsp;initialValue = (initialValue ^ bytes[i]) * FNV_PRIME_64;<br>
                         &emsp;}<br>
                         &emsp;// Return result when done!<br>
@@ -146,15 +146,19 @@
             </div>
             <div id="picture-div">
                 <h2>Today's Picture:</h2>
-            <p>Here is a Picture of some turtles, enjoy!</p>
-            <figure>
-                <img src="turtles.jpg" alt="mspaint turtles", width="500px">
-            </figure>
+                <p>Here is a Picture of some turtles, enjoy!</p>
+                <figure>
+                    <img src="turtles.jpg" alt="mspaint turtles", width="500px">
+                </figure>
             </div>
-            <!-- <div id="badges-div">
-               <img src="/assets/netscape_cube_badge.gif" alt="spinning netscape cube badge" height="50px">
-               <img src="/assets/ribbon_badge.png" alt="blue ribbon free speech online badge" width="50px">
-            </div> -->
+            <div id="navigation-div">
+                <div>
+                    <p></p>
+                </div>
+                <div>
+                    <p><a href="../newsletter2/index.html">Newsletter #2! &gt;</a></p>
+                </div>
+            </div>
         </div>
         <footer>
             <div id="footer-div">

@@ -473,3 +473,18 @@ footer p {
     visibility: hidden;
     z-index: 2;
 }
+
+figcaption {
+    font-size: 0.75em;
+}
+
+#navigation-div {
+    background-color: var(--rosey-red);
+    display: flex;
+    padding: 5px 10%;
+    justify-content: space-between;
+}
+
+#navigation-div a:hover {
+    background-color: var(--techy-cyan);
+}

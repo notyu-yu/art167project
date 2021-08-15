@@ -111,16 +111,16 @@
                        <p class="code-block"><code>
                         root_url = "https://7af11697c850fff.com/alexgray1033/"<br>
                         with open('sitemap.xml','w+') as f:<br>
-                        &emsp;f.write('&lt?xml version="1.0" encoding="UTF-8"?&gt\n')<br>
+                        &emsp;f.write('&lt;?xml version="1.0" encoding="UTF-8"?&gt;\n')<br>
                         &emsp;f.write('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')<br>
-                        &emsp;f.write("\t&lturl&gt\n")<br>
-                        &emsp;f.write("\t\t&ltloc&gt" + root_url + "&lt/loc&gt\n")<br>
-                        &emsp;f.write("\t&lt/url&gt\n")<br>
+                        &emsp;f.write("\t&lt;url&gt;\n")<br>
+                        &emsp;f.write("\t\t&lt;loc&gt;" + root_url + "&lt;/loc&gt;\n")<br>
+                        &emsp;f.write("\t&lt;/url&gt;\n")<br>
                         &emsp;for file_path in file_lst:<br>
-                        &emsp;&emsp;f.write("\t&lturl&gt\n")<br>
-                        &emsp;&emsp;f.write("\t\t&ltloc&gt" + root_url + file_path + "&lt/loc&gt\n")<br>
-                        &emsp;&emsp;f.write("\t&lt/url&gt\n")<br>
-                        &emsp;f.write("&lt/urlset&gt")
+                        &emsp;&emsp;f.write("\t&lt;url&gt;\n")<br>
+                        &emsp;&emsp;f.write("\t\t&lt;loc&gt;" + root_url + file_path + "&lt;/loc&gt;\n")<br>
+                        &emsp;&emsp;f.write("\t&lt;/url&gt;\n")<br>
+                        &emsp;f.write("&lt;/urlset&gt;")
                        </code></p>
                    </li>
                    <li>
@@ -135,10 +135,14 @@
                     <img src="cabin.jpg" alt="loggin cabin pwd: Reached", width="500px">
                 </figure>
             </div>
-            <!-- <div id="badges-div">
-               <img src="/assets/netscape_cube_badge.gif" alt="spinning netscape cube badge" height="50px">
-               <img src="/assets/ribbon_badge.png" alt="blue ribbon free speech online badge" width="50px">
-            </div> -->
+            <div id="navigation-div">
+                <div>
+                    <p><a href="../newsletter1/index.html">&lt; Newsletter #1!</a></p>
+                </div>
+                <div>
+                    <p><a href="../newsletter3/index.html">Newsletter #3! &gt;</a></p>
+                </div>
+            </div>
         </div>
         <footer>
             <div id="footer-div">
