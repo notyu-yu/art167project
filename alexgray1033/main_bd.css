@@ -145,8 +145,15 @@ h1, h2, p, figure, ol, ul {
     padding: 15px;
 }
 
+#contacts-div a {
+    animation-name: flashy-titles;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
 #contacts-div a:hover {
-    background-color: var(--rosey-red);
+    background-color: var(--grass-green);
 }
 
 h1, h2, p {
@@ -208,7 +215,6 @@ h1, h2, p {
 
 footer {
     background-color: var(--serious-black);
-    opacity: 0.8;
     font-family: "IM Fell French Canon";
     font-size: 14px;
     color: var(--serious-white);
