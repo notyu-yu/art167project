@@ -4,6 +4,7 @@
     --rosey-red: #FF3030;
     --sunny-yellow: #FFF500;
     --techy-cyan: #00F0FF;
+    --classy-purple: #aa2bff;
     --night-black: #050505;
     --serious-black: #111111;
     --serious-white: #eeeeee;
@@ -41,7 +42,7 @@ body {
     padding: 0;
     background-color: var(--techy-cyan);
     text-align: center;
-    animation-name: rainbow-bg;
+    animation-name: rainbow-bg, flashy-titles;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
@@ -52,16 +53,8 @@ body {
         background-color: var(--sunny-yellow);
     }
     
-    25% {
-        background-color: var(--rosey-red);
-    }
-    
     50% {
         background-color: var(--sky-blue);
-    }
-    
-    75% {
-        background-color: var(--techy-cyan);
     }
     
     to {
@@ -108,7 +101,7 @@ h1, h2, p, figure, ol, ul {
     font-weight: bold;
     text-decoration: underline;
     font-family: "Gloria Hallelujah";
-    background-color: var(--rosey-red);
+    background-color: var(--classy-purple);
     animation-name: flashy-titles;
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -117,15 +110,11 @@ h1, h2, p, figure, ol, ul {
 
 @keyframes flashy-titles {
     from {
-        color: var(--sunny-yellow);
-    }
-    
-    50% {
-        color: var(--sky-blue);
+        color: var(--techy-cyan);
     }
     
     to {
-        color: var(--grass-green);
+        color: var(--rosey-red);
     }
 }
 
@@ -154,10 +143,6 @@ h1, h2, p, figure, ol, ul {
 #alex-content figure {
     text-align: center;
     padding: 15px;
-}
-
-#alex-content a {
-    color: var(--night-black);
 }
 
 #contacts-div a:hover {
@@ -207,16 +192,18 @@ h1, h2, p {
     border-radius: 10px;
     margin: 10px;
     border-style: none;
-    background-color: var(--sky-blue);
     font-family: "Nanum Pen Script";
     font-size: 26px;
     transition: 0.5s;
+    animation-name: rainbow-bg, flashy-titles;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 /* add annoying animations? */
 .newsletter-buttons button:hover{
-    background-color: var(--rosey-red);
-    color: var(--serious-white);
+    border: solid 3px var(--rosey-red);
 }
 
 footer {
